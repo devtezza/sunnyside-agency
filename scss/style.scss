@@ -1,0 +1,63 @@
+/*WARNING*/
+
+/*
+1 - RUN sass --watch <scss-folder>:<css-folder> to synchronize files
+2 - FONT AWESOME WON'T BE NECESSARY (REGARDLESS TO AVAILABLE ASSETS)
+2 - CHECKLIST
+3 - DELETE THIS WARNING
+*/
+
+/*------------------------ GLOBAL STYLES ---------------------------------*/
+@media screen and (min-width: 25em) {
+html { 
+    font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) ); }
+}
+/*TEMPORARY AUX COLORS*/
+$dark: #000;
+
+/*PRIMARY COLORS*/
+$sof-red: hsl(7, 99%, 70%); /*Soft red*/
+$yellow: hsl(51, 100%, 49%); /*Yellow*/
+$graph-cyan: hsl(167, 40%, 24%); /*Dark desaturated cyan (graphic design text)*/
+$text-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
+$footer-cyan: hsl(168, 34%, 41%); /*Dark moderate cyan (footer)*/
+$attr-color: hsl(228, 45%, 44%); /*Footer attribution color*/
+
+/*NEUTRAL COLORS*/
+$vdd-blue: hsl(212, 27%, 19%); /*Very dark desaturated blue*/
+$vdg-blue: hsl(213, 9%, 39%); /*Very dark grayish blue*/
+$dg-blue: hsl(232, 10%, 55%); /*Dark grayish blue*/
+$g-blue: hsl(210, 4%, 67%); /*Grayish blue*/
+$white: hsl(0, 0%, 100%); /*White*/
+
+
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background: $white;    
+}
+
+a{
+    text-decoration: none;
+    color: $text-cyan;
+}
+
+
+
+/*------------------------ HEADER ---------------------------------*/
+
+
+
+/*------------------------ MAIN ---------------------------------*/
+
+
+
+/*------------------------ FOOTER ---------------------------------*/
+ .attribution { 
+    font-size: 11px; text-align: center;
+        a { 
+            color: $attr-color;
+        }
+}
+      

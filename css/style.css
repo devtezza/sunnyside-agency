@@ -1,0 +1,51 @@
+/*WARNING*/
+/*
+1 - RUN sass --watch <scss-folder>:<css-folder> to synchronize files
+2 - FONT AWESOME WON'T BE NECESSARY (REGARDLESS TO AVAILABLE ASSETS)
+2 - CHECKLIST
+3 - DELETE THIS WARNING
+*/
+/*------------------------ GLOBAL STYLES ---------------------------------*/
+@media screen and (min-width: 25em) {
+  html {
+    font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) );
+  }
+}
+/*TEMPORARY AUX COLORS*/
+/*PRIMARY COLORS*/
+/*Soft red*/
+/*Yellow*/
+/*Dark desaturated cyan (graphic design text)*/
+/*Dark blue (photography text)*/
+/*Dark moderate cyan (footer)*/
+/*Footer attribution color*/
+/*NEUTRAL COLORS*/
+/*Very dark desaturated blue*/
+/*Very dark grayish blue*/
+/*Dark grayish blue*/
+/*Grayish blue*/
+/*White*/
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: #19536b;
+}
+
+/*------------------------ HEADER ---------------------------------*/
+/*------------------------ MAIN ---------------------------------*/
+/*------------------------ FOOTER ---------------------------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
