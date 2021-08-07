@@ -12,8 +12,35 @@
 html { 
     font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) ); }
 }
+
+/*------------------------ TEMPORARY ---------------------------------*/
 /*TEMPORARY AUX COLORS*/
 $dark: #000;
+
+/*TEMPORARY AUX VARIABLES*/
+$bsolid: 1px solid black;
+$bdashed: 1px dashed black;
+$bdotted: 1px dotted black;
+$rsolid: 2px solid red;
+$rdotted: 1px dotted red;
+
+/*TEMPORARY AUX BORDERS*/
+header, main, footer {
+    border: $bsolid;    
+}
+
+section, nav {
+    border: $bdashed;
+}
+
+.menu {
+    border: $rdotted;
+}
+/*END TEMPORARY AUX BORDERS*/
+
+/*------------------------ END TEMPORARY ---------------------------------*/
+
+
 
 /*PRIMARY COLORS*/
 $sof-red: hsl(7, 99%, 70%); /*Soft red*/
@@ -35,7 +62,10 @@ html, body {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
-    background: $white;    
+    background: $white;
+    max-width: 1440px;
+    min-width: 200px;
+    border: $rsolid;
 }
 
 a{
@@ -43,10 +73,30 @@ a{
     color: $text-cyan;
 }
 
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 1em;
+}
 
+
+.menu {
+    text-transform: capitalize;
+}
+
+.hero, .cta {
+    text-transform: uppercase;
+}
 
 /*------------------------ HEADER ---------------------------------*/
-
+header {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+}
 
 
 /*------------------------ MAIN ---------------------------------*/
@@ -60,4 +110,16 @@ a{
             color: $attr-color;
         }
 }
+
+
+/*-----------------------------  BREAKING POINTS   ------------------------*/
+
+/*--------------------------------------------------First Breaking Point*/
+@media screen and (max-width: 375px) {
+    /*nav {
+        display: block;
+    } */ 
+}
+
+/*--------------------------------------------------End First Breaking Point*/
       

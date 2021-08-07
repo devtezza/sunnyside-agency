@@ -11,7 +11,24 @@
     font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) );
   }
 }
+/*------------------------ TEMPORARY ---------------------------------*/
 /*TEMPORARY AUX COLORS*/
+/*TEMPORARY AUX VARIABLES*/
+/*TEMPORARY AUX BORDERS*/
+header, main, footer {
+  border: 1px solid black;
+}
+
+section, nav {
+  border: 1px dashed black;
+}
+
+.menu {
+  border: 1px dotted red;
+}
+
+/*END TEMPORARY AUX BORDERS*/
+/*------------------------ END TEMPORARY ---------------------------------*/
 /*PRIMARY COLORS*/
 /*Soft red*/
 /*Yellow*/
@@ -30,6 +47,9 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   background: white;
+  max-width: 1440px;
+  min-width: 200px;
+  border: 2px solid red;
 }
 
 a {
@@ -37,7 +57,28 @@ a {
   color: #19536b;
 }
 
+li {
+  list-style: none;
+  display: inline-block;
+  padding: 1em;
+}
+
+.menu {
+  text-transform: capitalize;
+}
+
+.hero, .cta {
+  text-transform: uppercase;
+}
+
 /*------------------------ HEADER ---------------------------------*/
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
 /*------------------------ MAIN ---------------------------------*/
 /*------------------------ FOOTER ---------------------------------*/
 .attribution {
@@ -47,5 +88,14 @@ a {
 .attribution a {
   color: #3e52a3;
 }
+
+/*-----------------------------  BREAKING POINTS   ------------------------*/
+/*--------------------------------------------------First Breaking Point*/
+@media screen and (max-width: 375px) {
+  /*nav {
+      display: block;
+  } */
+}
+/*--------------------------------------------------End First Breaking Point*/
 
 /*# sourceMappingURL=style.css.map */
