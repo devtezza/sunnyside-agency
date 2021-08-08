@@ -11,6 +11,19 @@
     font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) );
   }
 }
+/*PRIMARY COLORS*/
+/*Soft red*/
+/*Yellow*/
+/*Dark desaturated cyan (graphic design text)*/
+/*Dark blue (photography text)*/
+/*Dark moderate cyan (footer)*/
+/*Footer attribution color*/
+/*NEUTRAL COLORS*/
+/*Very dark desaturated blue*/
+/*Very dark grayish blue*/
+/*Dark grayish blue*/
+/*Grayish blue*/
+/*White*/
 /*------------------------ TEMPORARY ---------------------------------*/
 /*TEMPORARY AUX COLORS*/
 /*TEMPORARY AUX VARIABLES*/
@@ -29,19 +42,6 @@ section, nav {
 
 /*END TEMPORARY AUX BORDERS*/
 /*------------------------ END TEMPORARY ---------------------------------*/
-/*PRIMARY COLORS*/
-/*Soft red*/
-/*Yellow*/
-/*Dark desaturated cyan (graphic design text)*/
-/*Dark blue (photography text)*/
-/*Dark moderate cyan (footer)*/
-/*Footer attribution color*/
-/*NEUTRAL COLORS*/
-/*Very dark desaturated blue*/
-/*Very dark grayish blue*/
-/*Dark grayish blue*/
-/*Grayish blue*/
-/*White*/
 html, body {
   margin: 0 auto;
   padding: 0;
@@ -50,6 +50,10 @@ html, body {
   max-width: 1440px;
   min-width: 200px;
   border: 2px solid red;
+}
+
+img {
+  max-width: 100%;
 }
 
 a {
@@ -80,12 +84,56 @@ header nav {
 }
 
 /*------------------------ MAIN ---------------------------------*/
+.grid-features {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "txt1 img1" "img2 txt2" "svc1 svc2 ";
+}
+.grid-features div {
+  border: 1px dashed green;
+  height: 16em;
+}
+
+.image1 {
+  background-image: url("../images/desktop/image-transform.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img1;
+}
+
+.image2 {
+  background-image: url("../images/desktop/image-stand-out.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img2;
+}
+
+.text1 {
+  grid-area: txt1;
+  text-align: center;
+  font-size: 0.7em;
+  padding-top: 5em;
+}
+
+.text2 {
+  grid-area: txt2;
+}
+
+.service1 {
+  grid-area: svc1;
+}
+
+.service2 {
+  grid-area: svc2;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-.gallery img {
-  max-width: 100%;
 }
 
 /*------------------------ FOOTER ---------------------------------*/

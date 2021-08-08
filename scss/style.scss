@@ -13,6 +13,21 @@ html {
     font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) ); }
 }
 
+/*PRIMARY COLORS*/
+$soft-red: hsl(7, 99%, 70%); /*Soft red*/
+$yellow: hsl(51, 100%, 49%); /*Yellow*/
+$graph-cyan: hsl(167, 40%, 24%); /*Dark desaturated cyan (graphic design text)*/
+$text-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
+$footer-cyan: hsl(168, 34%, 41%); /*Dark moderate cyan (footer)*/
+$attr-color: hsl(228, 45%, 44%); /*Footer attribution color*/
+
+/*NEUTRAL COLORS*/
+$vdd-blue: hsl(212, 27%, 19%); /*Very dark desaturated blue*/
+$vdg-blue: hsl(213, 9%, 39%); /*Very dark grayish blue*/
+$dg-blue: hsl(232, 10%, 55%); /*Dark grayish blue*/
+$g-blue: hsl(210, 4%, 67%); /*Grayish blue*/
+$white: hsl(0, 0%, 100%); /*White*/
+
 /*------------------------ TEMPORARY ---------------------------------*/
 /*TEMPORARY AUX COLORS*/
 $dark: #000;
@@ -30,7 +45,7 @@ header, main, footer {
 }
 
 section, nav {
-    border: $bdashed;
+    border: $bdashed;   
 }
 
 .menu {
@@ -40,24 +55,6 @@ section, nav {
 
 /*------------------------ END TEMPORARY ---------------------------------*/
 
-
-
-/*PRIMARY COLORS*/
-$sof-red: hsl(7, 99%, 70%); /*Soft red*/
-$yellow: hsl(51, 100%, 49%); /*Yellow*/
-$graph-cyan: hsl(167, 40%, 24%); /*Dark desaturated cyan (graphic design text)*/
-$text-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
-$footer-cyan: hsl(168, 34%, 41%); /*Dark moderate cyan (footer)*/
-$attr-color: hsl(228, 45%, 44%); /*Footer attribution color*/
-
-/*NEUTRAL COLORS*/
-$vdd-blue: hsl(212, 27%, 19%); /*Very dark desaturated blue*/
-$vdg-blue: hsl(213, 9%, 39%); /*Very dark grayish blue*/
-$dg-blue: hsl(232, 10%, 55%); /*Dark grayish blue*/
-$g-blue: hsl(210, 4%, 67%); /*Grayish blue*/
-$white: hsl(0, 0%, 100%); /*White*/
-
-
 html, body {
     margin: 0 auto;
     padding: 0;
@@ -66,6 +63,10 @@ html, body {
     max-width: 1440px;
     min-width: 200px;
     border: $rsolid;
+}
+
+img {
+        max-width: 100%;
 }
 
 a{
@@ -101,12 +102,66 @@ header {
 
 /*------------------------ MAIN ---------------------------------*/
 
+.grid-features {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "txt1 img1"
+        "img2 txt2"
+        "svc1 svc2 ";    
+    div {
+        border: 1px dashed green;
+         height: 16em;
+       
+    }
+    
+}
+
+
+.image1 {    
+    background-image: url('../images/desktop/image-transform.jpg');
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;    
+    grid-area: img1;    
+}
+
+
+ .image2 {
+    
+    background-image: url('../images/desktop/image-stand-out.jpg');
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    grid-area: img2;   
+      
+}
+
+.text1 {
+    grid-area: txt1;
+    text-align: center;
+    font-size: 0.7em;
+    padding-top: 5em;
+      
+}
+
+.text2 {
+    grid-area: txt2;
+}
+.service1 {
+    grid-area: svc1;
+}
+.service2 {
+    grid-area: svc2;
+}
+
+
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    img {
-        max-width: 100%;
-    }
+    grid-template-columns: repeat(4, 1fr);    
 }
 
 
