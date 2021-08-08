@@ -80,6 +80,14 @@ header nav {
 }
 
 /*------------------------ MAIN ---------------------------------*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.gallery img {
+  max-width: 100%;
+}
+
 /*------------------------ FOOTER ---------------------------------*/
 .attribution {
   font-size: 11px;
