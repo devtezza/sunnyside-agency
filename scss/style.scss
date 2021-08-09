@@ -10,7 +10,7 @@
 /*------------------------ GLOBAL STYLES ---------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,600;1,100&family=Fraunces:wght@400;700;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100&family=Fraunces:wght@400;700;900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100&family=Fraunces:wght@400;700;900&display=swap');*/
 
 @media screen and (min-width: 25em) {
 html { 
@@ -32,32 +32,8 @@ $dg-blue: hsl(232, 10%, 55%); /*Dark grayish blue*/
 $g-blue: hsl(210, 4%, 67%); /*Grayish blue*/
 $white: hsl(0, 0%, 100%); /*White*/
 
-/*------------------------ TEMPORARY ---------------------------------*/
-/*TEMPORARY AUX COLORS*/
-$dark: #000;
 
-/*TEMPORARY AUX VARIABLES*/
-$bsolid: 1px solid black;
-$bdashed: 1px dashed black;
-$bdotted: 1px dotted black;
-$rsolid: 2px solid red;
-$rdotted: 1px dotted red;
 
-/*TEMPORARY AUX BORDERS*/
-header, main, footer {
-    border: $bsolid;    
-}
-
-section, nav {
-    border: $bdashed;   
-}
-
-.menu {
-    border: $rdotted;
-}
-/*END TEMPORARY AUX BORDERS*/
-
-/*------------------------ END TEMPORARY ---------------------------------*/
 * {
     box-sizing: border-box;
 }
@@ -68,7 +44,7 @@ html, body {
     background: $white;
     max-width: 1440px;
     min-width: 200px;
-    border: $rsolid;
+    /*border: 1px solid red;*/
     margin: 0 auto;
     padding: 0;
     font-family: 'Barlow', sans-serif;
@@ -94,7 +70,7 @@ p {
 }
 
 img {
-        max-width: 100%;
+    max-width: 100%;
 }
 
 a{
@@ -119,14 +95,64 @@ li {
 
 /*------------------------ HEADER ---------------------------------*/
 header {
+    
+    color: $white;
+    height: 21.5em;
+    background-image: url('../images/desktop/image-header.jpg');
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+
     nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 1em;
+        padding: 0.8em 0;
+        font-size: 0.5em; 
+
+        ul {
+            padding-right: 2em;
+        }             
+
+        img {
+            width: 53%;
+            /*border: 2px solid yellow;*/
+        }
+
+        a {
+            padding: 0.4em;
+            font-weight: 600;
+            color: $white;
+        }
+             
+    }
+
+}
+
+.logo {
+    /*line-height: 2em;*/
+    width: 25%;
+    padding-left: 2.2em;
+    /*border: 1px solid white;*/
+}
+
+.hero {
+    padding-top: 1em;    
+    text-align: center;    
+    h1 {
+        margin-bottom: 1.5em;
     }
 }
 
+.cta a {
+    font-family: 'Fraunces', serif;
+    font-size: 0.85em;
+    font-weight: 900;
+    padding: 1.2em 1.8em;
+    border-radius: 1.8em;
+    background: $white; 
+    color: $vdd-blue;
+}    
 
 /*------------------------ MAIN ---------------------------------*/
 
@@ -179,28 +205,49 @@ header {
 .text2 {
     grid-area: txt2;
 }
-.service1 {
+
+
+.service1 {        
+    background-image: url('../images/desktop/image-graphic-design.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     grid-area: svc1;
 }
-.service2 {
+
+.service2 {    
+    background-image: url('../images/desktop/image-photography.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     grid-area: svc2;
 }
 
 .text1, .text2 {
     padding: 3em 2.5em 3em 4em;
+    h2 {
+        font-size: 1.1em;
+        font-weight: 900;
+    }
     p {
         line-height: 1.8em;
     }  
 }
 
 .service1, .service2 {
-    padding-top: 7em;
+    text-align: center;
+    padding: 10em 4.5em 0 4.5em;
+    h3 {
+        font-size: 0.7em;
+        font-weight: 900;
+    }
+    p {
+        font-size: 0.4em;
+        font-weight: 600;
+        line-height: 1.5em;
+    }
 }
 
-h2, h3 {
-    font-size: 1.1em;
-    font-weight: 900;
-}
 
 .gallery {
     display: grid;

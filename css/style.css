@@ -7,7 +7,7 @@
 */
 /*------------------------ GLOBAL STYLES ---------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,600;1,100&family=Fraunces:wght@400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100&family=Fraunces:wght@400;700;900&display=swap");
+/*@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100&family=Fraunces:wght@400;700;900&display=swap');*/
 @media screen and (min-width: 25em) {
   html {
     font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) );
@@ -26,24 +26,6 @@
 /*Dark grayish blue*/
 /*Grayish blue*/
 /*White*/
-/*------------------------ TEMPORARY ---------------------------------*/
-/*TEMPORARY AUX COLORS*/
-/*TEMPORARY AUX VARIABLES*/
-/*TEMPORARY AUX BORDERS*/
-header, main, footer {
-  border: 1px solid black;
-}
-
-section, nav {
-  border: 1px dashed black;
-}
-
-.menu {
-  border: 1px dotted red;
-}
-
-/*END TEMPORARY AUX BORDERS*/
-/*------------------------ END TEMPORARY ---------------------------------*/
 * {
   box-sizing: border-box;
 }
@@ -52,7 +34,7 @@ html, body {
   background: white;
   max-width: 1440px;
   min-width: 200px;
-  border: 2px solid red;
+  /*border: 1px solid red;*/
   margin: 0 auto;
   padding: 0;
   font-family: "Barlow", sans-serif;
@@ -97,11 +79,57 @@ li {
 }
 
 /*------------------------ HEADER ---------------------------------*/
+header {
+  color: white;
+  height: 21.5em;
+  background-image: url("../images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
 header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1em;
+  padding: 0.8em 0;
+  font-size: 0.5em;
+}
+header nav ul {
+  padding-right: 2em;
+}
+header nav img {
+  width: 53%;
+  /*border: 2px solid yellow;*/
+}
+header nav a {
+  padding: 0.4em;
+  font-weight: 600;
+  color: white;
+}
+
+.logo {
+  /*line-height: 2em;*/
+  width: 25%;
+  padding-left: 2.2em;
+  /*border: 1px solid white;*/
+}
+
+.hero {
+  padding-top: 1em;
+  text-align: center;
+}
+.hero h1 {
+  margin-bottom: 1.5em;
+}
+
+.cta a {
+  font-family: "Fraunces", serif;
+  font-size: 0.85em;
+  font-weight: 900;
+  padding: 1.2em 1.8em;
+  border-radius: 1.8em;
+  background: white;
+  color: #23303e;
 }
 
 /*------------------------ MAIN ---------------------------------*/
@@ -147,27 +175,44 @@ header nav {
 }
 
 .service1 {
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: svc1;
 }
 
 .service2 {
+  background-image: url("../images/desktop/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   grid-area: svc2;
 }
 
 .text1, .text2 {
   padding: 3em 2.5em 3em 4em;
 }
+.text1 h2, .text2 h2 {
+  font-size: 1.1em;
+  font-weight: 900;
+}
 .text1 p, .text2 p {
   line-height: 1.8em;
 }
 
 .service1, .service2 {
-  padding-top: 7em;
+  text-align: center;
+  padding: 10em 4.5em 0 4.5em;
 }
-
-h2, h3 {
-  font-size: 1.1em;
+.service1 h3, .service2 h3 {
+  font-size: 0.7em;
   font-weight: 900;
+}
+.service1 p, .service2 p {
+  font-size: 0.4em;
+  font-weight: 600;
+  line-height: 1.5em;
 }
 
 .gallery {
