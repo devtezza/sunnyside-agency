@@ -6,6 +6,8 @@
 3 - DELETE THIS WARNING
 */
 /*------------------------ GLOBAL STYLES ---------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,600;1,100&family=Fraunces:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100&family=Fraunces:wght@400;700;900&display=swap");
 @media screen and (min-width: 25em) {
   html {
     font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) );
@@ -42,14 +44,33 @@ section, nav {
 
 /*END TEMPORARY AUX BORDERS*/
 /*------------------------ END TEMPORARY ---------------------------------*/
-html, body {
-  margin: 0 auto;
-  padding: 0;
+* {
   box-sizing: border-box;
+}
+
+html, body {
   background: white;
   max-width: 1440px;
   min-width: 200px;
   border: 2px solid red;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", serif;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+}
+
+p {
+  font-size: 0.5em;
 }
 
 img {
@@ -86,14 +107,17 @@ header nav {
 /*------------------------ MAIN ---------------------------------*/
 .grid-features {
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "txt1 img1" "img2 txt2" "svc1 svc2 ";
 }
+.grid-features section {
+  text-align: center;
+}
 .grid-features div {
   border: 1px dashed green;
   height: 16em;
+  /*text-align: center;*/
 }
 
 .image1 {
@@ -114,9 +138,8 @@ header nav {
 
 .text1 {
   grid-area: txt1;
-  text-align: center;
-  font-size: 0.7em;
-  padding-top: 5em;
+  /*font-size: 0.7em;*/
+  /*padding-top: 5em;*/
 }
 
 .text2 {
@@ -129,6 +152,22 @@ header nav {
 
 .service2 {
   grid-area: svc2;
+}
+
+.text1, .text2 {
+  padding: 3em 2.5em 3em 4em;
+}
+.text1 p, .text2 p {
+  line-height: 1.8em;
+}
+
+.service1, .service2 {
+  padding-top: 7em;
+}
+
+h2, h3 {
+  font-size: 1.1em;
+  font-weight: 900;
 }
 
 .gallery {
