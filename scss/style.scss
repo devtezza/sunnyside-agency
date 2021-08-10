@@ -18,11 +18,12 @@ html {
 }
 
 /*PRIMARY COLORS*/
-$yellow-opacity: hsla(51, 100%, 49%, 0.4);
-$soft-red: hsl(7, 99%, 70%); /*Soft red*/
+$soft-red: hsl(7, 99%, 70%); /*Soft Red*/
+$soft-red-opacity: hsla(7, 99%, 70%, 0.4); /*Soft Red with opacity*/
 $yellow: hsl(51, 100%, 49%); /*Yellow*/
+$yellow-opacity: hsla(51, 100%, 49%, 0.4); /*Yellow with opacity*/
 $graph-cyan: hsl(167, 40%, 24%); /*Dark desaturated cyan (graphic design text)*/
-$text-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
+$photo-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
 $footer-cyan: hsl(168, 34%, 41%); /*Dark moderate cyan (footer)*/
 $attr-color: hsl(228, 45%, 44%); /*Footer attribution color*/
 
@@ -76,7 +77,7 @@ img {
 
 a{
     text-decoration: none;
-    color: $text-cyan;
+    color: $photo-cyan;
 }
 
 li {
@@ -214,6 +215,7 @@ header {
     background-position: center;
     background-size: cover;
     grid-area: svc1;
+    color: $graph-cyan;
 }
 
 .service2 {    
@@ -222,6 +224,7 @@ header {
     background-position: center;
     background-size: cover;
     grid-area: svc2;
+    color: $photo-cyan;
 }
 
 .text1, .text2 {
@@ -252,8 +255,7 @@ header {
         position: absolute;
         z-index: -1;
         display: inline-block;
-        /*transition: background 1s ease-out;*/
-        background: $yellow-opacity;
+        /*transition: background 1s ease-out;*/        
         width: 8em;
         height: 0.6em;
         margin-left: -7.6em;        
@@ -261,31 +263,91 @@ header {
         border-radius: 0.2em;
         
     }
+
+    /*a:hover span {
+        transition: background 1s ease-in;
+    } */
+
+    .link-decoration-1 {
+        background: $yellow-opacity;        
+    }
+
+    .link-decoration-2 {
+        background: $soft-red-opacity;
+        
+    }
+
     
     a:hover {
-        span {
-            /*transition: background 1s ease-in;*/
-            background: $yellow;}
+        .link-decoration-1 {            
+            background: $yellow;           
+        }
+        .link-decoration-2 {
+            background: $soft-red;            
+        }
         
     }
 
 
 }
 
+
 .service1, .service2 {
     text-align: center;
     padding: 10em 4.5em 0 4.5em;
     h3 {
-        font-size: 0.7em;
+        font-size: 0.8em;
         font-weight: 900;
     }
     p {
-        font-size: 0.4em;
+        font-size: 0.45em;
         font-weight: 600;
         line-height: 1.5em;
     }
 }
 
+
+.testimonials {
+        padding: 4em 0;
+        border: 3px dotted red;
+        /*box-sizing: border-box;*/
+    h2 {
+        text-align: center;
+        font-size: 0.52em;
+        text-transform: uppercase;    
+        letter-spacing: 0.3em;
+        font-weight: 900;
+        color: $g-blue;
+        
+    }
+}
+
+.clients {
+    margin-top: 2em;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    /*align-items: flex-start;*/
+    
+    /*border: 3px dotted black;*/
+    div {
+        /*border: 1px solid green;*/
+        text-align: center;
+        max-width: 28%;
+    }
+    p {
+       text-align: center;
+       width: 90%;
+       /*border: 1px dashed red;*/
+       margin: 2em auto;
+       font-size: 0.5em;
+       color: $vdg-blue;
+    }
+    img {
+        max-width: 1.9em;
+        border-radius: 50%;
+    }
+}
 
 .gallery {
     display: grid;

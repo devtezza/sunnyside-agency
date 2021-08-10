@@ -14,8 +14,10 @@
   }
 }
 /*PRIMARY COLORS*/
-/*Soft red*/
+/*Soft Red*/
+/*Soft Red with opacity*/
 /*Yellow*/
+/*Yellow with opacity*/
 /*Dark desaturated cyan (graphic design text)*/
 /*Dark blue (photography text)*/
 /*Dark moderate cyan (footer)*/
@@ -180,6 +182,7 @@ header nav a {
   background-position: center;
   background-size: cover;
   grid-area: svc1;
+  color: #25564b;
 }
 
 .service2 {
@@ -188,10 +191,14 @@ header nav a {
   background-position: center;
   background-size: cover;
   grid-area: svc2;
+  color: #19536b;
 }
 
 .text1, .text2 {
   padding: 3em 2.6em 3em 4em;
+  /*a:hover span {
+      transition: background 1s ease-in;
+  } */
 }
 .text1 h2, .text1 a, .text2 h2, .text2 a {
   font-weight: 900;
@@ -217,16 +224,23 @@ header nav a {
   z-index: -1;
   display: inline-block;
   /*transition: background 1s ease-out;*/
-  background: rgba(250, 212, 0, 0.4);
   width: 8em;
   height: 0.6em;
   margin-left: -7.6em;
   margin-top: 1.9em;
   border-radius: 0.2em;
 }
-.text1 a:hover span, .text2 a:hover span {
-  /*transition: background 1s ease-in;*/
+.text1 .link-decoration-1, .text2 .link-decoration-1 {
+  background: rgba(250, 212, 0, 0.4);
+}
+.text1 .link-decoration-2, .text2 .link-decoration-2 {
+  background: rgba(254, 120, 103, 0.4);
+}
+.text1 a:hover .link-decoration-1, .text2 a:hover .link-decoration-1 {
   background: #fad400;
+}
+.text1 a:hover .link-decoration-2, .text2 a:hover .link-decoration-2 {
+  background: #fe7867;
 }
 
 .service1, .service2 {
@@ -234,13 +248,53 @@ header nav a {
   padding: 10em 4.5em 0 4.5em;
 }
 .service1 h3, .service2 h3 {
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 900;
 }
 .service1 p, .service2 p {
-  font-size: 0.4em;
+  font-size: 0.45em;
   font-weight: 600;
   line-height: 1.5em;
+}
+
+.testimonials {
+  padding: 4em 0;
+  border: 3px dotted red;
+  /*box-sizing: border-box;*/
+}
+.testimonials h2 {
+  text-align: center;
+  font-size: 0.52em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: 900;
+  color: #a7abae;
+}
+
+.clients {
+  margin-top: 2em;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  /*align-items: flex-start;*/
+  /*border: 3px dotted black;*/
+}
+.clients div {
+  /*border: 1px solid green;*/
+  text-align: center;
+  max-width: 28%;
+}
+.clients p {
+  text-align: center;
+  width: 90%;
+  /*border: 1px dashed red;*/
+  margin: 2em auto;
+  font-size: 0.5em;
+  color: #5a636c;
+}
+.clients img {
+  max-width: 1.9em;
+  border-radius: 50%;
 }
 
 .gallery {
