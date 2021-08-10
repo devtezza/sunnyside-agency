@@ -126,7 +126,7 @@ header nav a {
   font-family: "Fraunces", serif;
   font-size: 0.85em;
   font-weight: 900;
-  padding: 1.2em 1.8em;
+  padding: 1.2em 2em;
   border-radius: 1.8em;
   background: white;
   color: #23303e;
@@ -143,7 +143,7 @@ header nav a {
   text-align: center;
 }
 .grid-features div {
-  border: 1px dashed green;
+  /*border: 1px dashed green;*/
   height: 16em;
   /*text-align: center;*/
 }
@@ -191,14 +191,42 @@ header nav a {
 }
 
 .text1, .text2 {
-  padding: 3em 2.5em 3em 4em;
+  padding: 3em 2.6em 3em 4em;
+}
+.text1 h2, .text1 a, .text2 h2, .text2 a {
+  font-weight: 900;
+  color: #23303e;
 }
 .text1 h2, .text2 h2 {
   font-size: 1.1em;
-  font-weight: 900;
 }
 .text1 p, .text2 p {
   line-height: 1.8em;
+  color: #818498;
+}
+.text1 a, .text2 a {
+  font-family: "Fraunces", serif;
+  font-size: 0.45em;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 2em;
+  z-index: 0;
+}
+.text1 span, .text2 span {
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  /*transition: background 1s ease-out;*/
+  background: rgba(250, 212, 0, 0.4);
+  width: 8em;
+  height: 0.6em;
+  margin-left: -7.6em;
+  margin-top: 1.9em;
+  border-radius: 0.2em;
+}
+.text1 a:hover span, .text2 a:hover span {
+  /*transition: background 1s ease-in;*/
+  background: #fad400;
 }
 
 .service1, .service2 {
