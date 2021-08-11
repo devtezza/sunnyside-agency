@@ -45,7 +45,7 @@ $white: hsl(0, 0%, 100%); /*White*/
 
 html, body {
     
-    background: $white;
+    /*background: $white;*/
     max-width: 1440px;
     min-width: 200px;
     /*border: 1px solid red;*/
@@ -78,8 +78,7 @@ img {
 }
 
 a{
-    text-decoration: none;
-    color: $photo-cyan;
+    text-decoration: none;    
 }
 
 li {
@@ -100,35 +99,36 @@ li {
 /*------------------------ HEADER ---------------------------------*/
 header {
     
-    color: $white;
+    /*color: $white;*/
     height: 21.5em;
     background-image: url('../images/desktop/image-header.jpg');
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
 
-    nav {
+    .top-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0.8em 0;
         font-size: 0.5em; 
+        /*border: 1px solid red;*/
 
-        ul {
-            padding-right: 2em;
-        }             
+            img {
+                width: 53%;
+                /*border: 1px solid black;*/
+            }
 
-        img {
-            width: 53%;
-            /*border: 2px solid yellow;*/
-        }
-
-        a {
-            padding: 0.4em;
-            font-weight: 600;
-            color: $white;
-        }
-             
+            ul {
+                padding-right: 2em;
+                /*border: 1px solid black;*/
+                li:nth-child(-n+3) a {
+                    padding: 0.4em;
+                    font-weight: 600;
+                    color: $white;
+                    /*border: 1px solid red;*/
+                }
+            }
     }
 
 }
@@ -140,21 +140,22 @@ header {
     /*border: 1px solid white;*/
 }
 
-.hero {
+.hero { 
     padding-top: 1em;    
     text-align: center;    
     h1 {
         margin-bottom: 1.5em;
     }
+    color: $white
 }
 
-.cta a {
+.cta {
     font-family: 'Fraunces', serif;
     font-size: 0.85em;
     font-weight: 900;
     padding: 1.2em 2em;
     border-radius: 1.8em;
-    background: $white; 
+    background: $white;
     color: $vdd-blue;
 }    
 
@@ -457,8 +458,12 @@ footer {
 /*-----------------------------  BREAKING POINTS   ------------------------*/
 
 /*--------------------------------------------------First Breaking Point*/
+@media screen and (max-width: 768px) {
+    
+}
+
 @media screen and (max-width: 375px) {
-    /*nav {
+    /*.top-bar {
         display: block;
     } */ 
 }
