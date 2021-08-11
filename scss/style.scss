@@ -24,7 +24,9 @@ $yellow: hsl(51, 100%, 49%); /*Yellow*/
 $yellow-opacity: hsla(51, 100%, 49%, 0.4); /*Yellow with opacity*/
 $graph-cyan: hsl(167, 40%, 24%); /*Dark desaturated cyan (graphic design text)*/
 $photo-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
-$footer-cyan: hsl(168, 34%, 41%); /*Dark moderate cyan (footer)*/
+$footer-text: hsl(168, 34%, 41%); /*Dark moderate cyan (footer text)*/
+/*$footer-icons: hsl(166, 47%, 29%);*/
+$footer-bg: hsl(167, 44%, 70%); /*Middle Blue Green* (footer background)*/
 $attr-color: hsl(228, 45%, 44%); /*Footer attribution color*/
 
 /*NEUTRAL COLORS*/
@@ -373,8 +375,79 @@ header {
 
 
 /*------------------------ FOOTER ---------------------------------*/
- .attribution { 
-    font-size: 11px; text-align: center;
+
+footer {
+    background: $footer-bg;
+    padding-top: 4em;
+    font-size: 0.5em;
+    .logo {
+        width: 100%; 
+        padding: 0;       
+        text-align: center;
+        /*border: 1px solid yellow;*/
+        img {
+            margin: 0 auto;
+            width: 9em;
+            /*border: 1px solid red;*/
+        }
+    }
+    
+    .menu {
+        color: $footer-text;
+        text-align: center;
+        ul {
+            padding-left: 0;
+            padding-right: 0;    
+            li {
+                padding: 1.2em 1.5em;
+                &:first-child{
+                    padding-left: 0;
+                    /*border: 1px solid yellow;*/
+                }
+                &:last-child{
+                    padding-right: 0;
+                    /*border: 1px solid yellow;*/
+                }  
+            }
+        }        
+    }
+} 
+
+.social-bar {
+    /*border: 1px solid red; */
+    margin: 3.5em auto;
+    text-align: center;        
+    ul {
+        padding-left: 0;
+        padding-right: 0;
+        /*border: 1px solid white;*/
+        margin: 2em auto;
+        li {
+            padding: 0 0.75em;
+            &:first-child{
+                padding-left: 0;
+                /*border: 1px solid yellow;*/
+            }
+            &:last-child{
+                padding-right: 0;
+                /*border: 1px solid yellow;*/
+            } 
+        }
+        img {
+           max-width: 100%;
+        }
+    }
+    
+}
+
+
+
+.attribution {
+    /*border: 1px solid red; */
+    font-size: 0.5em;
+    text-align: center;
+    margin: 0 10em;
+    padding: 0;
         a { 
             color: $attr-color;
         }

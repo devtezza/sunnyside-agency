@@ -20,7 +20,9 @@
 /*Yellow with opacity*/
 /*Dark desaturated cyan (graphic design text)*/
 /*Dark blue (photography text)*/
-/*Dark moderate cyan (footer)*/
+/*Dark moderate cyan (footer text)*/
+/*$footer-icons: hsl(166, 47%, 29%);*/
+/*Middle Blue Green* (footer background)*/
 /*Footer attribution color*/
 /*NEUTRAL COLORS*/
 /*Very dark desaturated blue*/
@@ -319,9 +321,74 @@ header nav a {
 }
 
 /*------------------------ FOOTER ---------------------------------*/
-.attribution {
-  font-size: 11px;
+footer {
+  background: #91d4c6;
+  padding-top: 4em;
+  font-size: 0.5em;
+}
+footer .logo {
+  width: 100%;
+  padding: 0;
   text-align: center;
+  /*border: 1px solid yellow;*/
+}
+footer .logo img {
+  margin: 0 auto;
+  width: 9em;
+  /*border: 1px solid red;*/
+}
+footer .menu {
+  color: #458c7e;
+  text-align: center;
+}
+footer .menu ul {
+  padding-left: 0;
+  padding-right: 0;
+}
+footer .menu ul li {
+  padding: 1.2em 1.5em;
+}
+footer .menu ul li:first-child {
+  padding-left: 0;
+  /*border: 1px solid yellow;*/
+}
+footer .menu ul li:last-child {
+  padding-right: 0;
+  /*border: 1px solid yellow;*/
+}
+
+.social-bar {
+  /*border: 1px solid red; */
+  margin: 3.5em auto;
+  text-align: center;
+}
+.social-bar ul {
+  padding-left: 0;
+  padding-right: 0;
+  /*border: 1px solid white;*/
+  margin: 2em auto;
+}
+.social-bar ul li {
+  padding: 0 0.75em;
+}
+.social-bar ul li:first-child {
+  padding-left: 0;
+  /*border: 1px solid yellow;*/
+}
+.social-bar ul li:last-child {
+  padding-right: 0;
+  /*border: 1px solid yellow;*/
+}
+.social-bar ul img {
+  max-width: 100%;
+}
+
+.attribution {
+  /*border: 1px solid red; */
+  font-size: 0.5em;
+  text-align: center;
+  margin: 0 10em;
+  padding: 0;
 }
 .attribution a {
   color: #3e52a3;
