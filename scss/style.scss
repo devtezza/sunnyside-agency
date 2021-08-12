@@ -90,11 +90,30 @@ li {
 
 .menu {
     text-transform: capitalize;
+        a {
+            display: block;
+        }
 }
 
 .hero, .cta {
     text-transform: uppercase;
 }
+
+.menu-hamburger {
+    display: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 1rem;
+    border: none;
+    outline: none;
+    opacity: 0;
+    visibility: visible;
+    background: none;
+    /*transform: rotate(0deg);
+    transition: all 0.35s ease;*/
+}
+
+
 
 /*------------------------ HEADER ---------------------------------*/
 header {
@@ -408,6 +427,9 @@ footer {
                 &:last-child{
                     padding-right: 0;
                     /*border: 1px solid yellow;*/
+                } 
+                a {
+                    color: $footer-text;      
                 }  
             }
         }        
@@ -459,6 +481,8 @@ footer {
 
 /*--------------------------------------------------First Breaking Point*/
 @media screen and (max-width: 768px) {
+   
+   
     
 }
 

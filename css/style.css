@@ -76,9 +76,26 @@ li {
 .menu {
   text-transform: capitalize;
 }
+.menu a {
+  display: block;
+}
 
 .hero, .cta {
   text-transform: uppercase;
+}
+
+.menu-hamburger {
+  display: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 1rem;
+  border: none;
+  outline: none;
+  opacity: 0;
+  visibility: visible;
+  background: none;
+  /*transform: rotate(0deg);
+  transition: all 0.35s ease;*/
 }
 
 /*------------------------ HEADER ---------------------------------*/
@@ -358,6 +375,9 @@ footer .menu ul li:first-child {
 footer .menu ul li:last-child {
   padding-right: 0;
   /*border: 1px solid yellow;*/
+}
+footer .menu ul li a {
+  color: #458c7e;
 }
 
 .social-bar {
