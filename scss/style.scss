@@ -184,19 +184,20 @@ header {
 
 .grid-features {
     display: grid;   
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 50% 50%;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
         "txt1 img1"
         "img2 txt2"
         "svc1 svc2 ";    
     section {
-        text-align: center;
+        text-align: center;        
     }
     div {
         border: 1px dashed green;
         height: 16em;
         /*text-align: center;*/
+
        
     }    
 }
@@ -562,9 +563,31 @@ footer {
              visibility: visible;         
         }
 
-        /*.grid-features {
+        .grid-features {
             display: block;
-        }*/
+            div {
+                &.image1, &.image2 {
+                height: 20em;
+                }
+
+                &.text1, &.text2 {
+                    height: 27.5rem;
+                    font-size: 2rem;
+                    padding: 4rem 2rem 3rem 2rem;
+                    text-align: center;
+                    line-height: 2rem;
+                    p {
+                        font-size: 1.2rem;
+                    }                    
+                }
+
+                &.service1, &.service2 {
+                    height: 37.5em;
+                }
+            }
+        }
+
+        
 
         /*.image2 {
     
@@ -581,10 +604,58 @@ footer {
     
 }
 
+@media screen and (max-width: 648px) {
+    .grid-features {
+        div {
+            &.text1, &.text2 {
+                /*height: 27.5rem;
+                font-size: 2rem;*/
+                padding: 3rem 1.5rem 2rem 1.5rem;
+                /*text-align: center;
+                line-height: 2rem;
+                p {
+                    font-size: 1.1rem;
+                }*/                    
+            }
+        }
+    }
+}
+
+
+
 @media screen and (max-width: 375px) {
-    /*.top-bar {
-        display: block;
-    } */ 
+    .grid-features {
+        div {
+            &.text1, &.text2 {
+                /*height: 27.5rem;*/
+                font-size: 2rem;
+                padding: 2rem 1rem 1rem 1rem;
+                /*text-align: center;
+                line-height: 2rem;
+                p {
+                    font-size: 1.1rem;
+                }*/                    
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 344px) {
+    .grid-features {
+        div {
+            &.text1, &.text2 {
+                /*height: 27.5rem;*/
+                font-size: 2rem;
+                padding: 1rem;
+                /*text-align: center;
+                line-height: 2rem;*/
+                p {
+                    font-size: 1.1rem;
+                }                   
+            }
+        }
+    }
 }
 
 /*--------------------------------------------------End First Breaking Point*/
