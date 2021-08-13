@@ -509,14 +509,14 @@ footer {
         overflow-y: auto;
         /*visibility: hidden;*/
         /*left: 0;*/
-        opacity: 1;
-        visibility: visible;        
+        opacity: 0;
+        visibility: hidden;        
 
-         /*&.active {
+         &.active {
             left: 0rem;
             opacity: 1;
             visibility: visible;
-         }*/
+         }
             
 
         

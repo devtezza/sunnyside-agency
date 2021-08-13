@@ -1,22 +1,28 @@
-const openedMenu = document.querySelector('.opened-menu');
-const closedMenu = document.querySelector('.closed-menu');
-const navbarMenu = document.querySelector('.navbar');
-const menuOverlay = document.querySelector('.overlay');
+const menuHamburger = document.querySelector('.menu-hamburger');
+/*const closedMenu = document.querySelector('.closed-menu');*/
+const navbarMenu = document.querySelector('.menu');
+/*const menuOverlay = document.querySelector('.overlay');*/
 
 // Opened navbarMenu
 // Closed navbarMenu
 // Closed navbarMenu by Click Outside
-openedMenu.addEventListener('click', toggleMenu);
-closedMenu.addEventListener('click', toggleMenu);
-menuOverlay.addEventListener('click', toggleMenu);
+menuHamburger.addEventListener('click', toggleMenu);
+/*closedMenu.addEventListener('click', toggleMenu);*/
+/*menuOverlay.addEventListener('click', toggleMenu);*/
 
 // Toggle Menu Function
 function toggleMenu() {
-   navbarMenu.classList.toggle('active');
-   menuOverlay.classList.toggle('active');
-   document.body.classList.toggle('scrolling');
+    if (navbarMenu.classList.contains('active')) {        
+        navbarMenu.classList.toggle('active');
+    }
+    /*menuOverlay.classList.toggle('active');*/
+    else {
+        navbarMenu.classList.toggle('active');
+        document.body.classList.toggle('scrolling');
+    }
+    
+    
 }
-
 
 // Fixed Resize Screen Function
 function resizeScreen() {
@@ -24,15 +30,11 @@ function resizeScreen() {
    if (navbarMenu.classList.contains('active')) {
       toggleMenu();
    }
-
-   // If menuItemHasChildren is Expanded, Collapse It
-   /*if (navbarMenu.querySelector('.menu-item-has-children.active')) {
-      collapseSubMenu();
-   }*/
+  
 }
 
 window.addEventListener('resize', () => {
-   if (this.innerWidth > 992) {
+   if (this.innerWidth > 768) {
       resizeScreen();
    }
 });
