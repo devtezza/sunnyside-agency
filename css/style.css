@@ -303,36 +303,38 @@ header .top-bar ul li:nth-child(-n+3) a {
   /*align-items: flex-start;*/
   /*border: 3px dotted black;*/
 }
-.clients div {
+.clients > div {
   /*border: 1px solid green;*/
   text-align: center;
   max-width: 28%;
+  height: 10em;
 }
-.clients img {
+.clients > div img {
   max-width: 1.9em;
   border-radius: 50%;
   /*margin-bottom: 0;*/
 }
-.clients p {
+.clients > div p {
   text-align: center;
   width: 93%;
+  height: 30%;
   /*border: 1px dashed red;*/
-  margin: 3.5em auto 3.5em auto;
+  margin: 3.5em auto 0 auto;
   padding-bottom: 0;
   line-height: 1.7em;
   font-size: 0.5em;
   color: #5a636c;
 }
-.clients h3 {
+.clients > div h3 {
   font-size: 0.5em;
   font-weight: 900;
   /*border: 1px solid black;*/
-  margin: auto;
+  margin: 2em auto 0 auto;
 }
-.clients span {
-  margin-top: 0em;
+.clients > div > div {
+  margin-top: 0.5em;
   padding-top: 0;
-  font-size: 0.4em;
+  font-size: 0.5em;
   color: #a7abae;
   /*border: 1px dashed green;*/
 }
@@ -445,7 +447,7 @@ footer .menu ul li a {
     left: -50em;
     z-index: 998;
     margin: 0 auto;
-    width: 85%;
+    width: 90%;
     height: 30em;
     opacity: 0;
     visibility: hidden;
@@ -469,26 +471,33 @@ footer .menu ul li a {
     border-style: solid;
     border-width: 0 0 5em 5em;
     border-color: transparent transparent white transparent;
-    /*margin-left: -10em;*/
   }
   header .top-bar .menu.active {
-    left: 2%;
-    right: 2%;
+    left: 1em;
+    right: 1em;
     opacity: 1;
     visibility: visible;
   }
   header .top-bar .menu ul {
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 1em 0;
+    text-align: center;
   }
   header .top-bar .menu ul li {
     display: block;
-    margin: 0;
+    /*border: 1px solid green;*/
   }
   header .top-bar .menu ul li a {
-    padding: 0.75rem 1rem;
+    /*padding: 1rem 1rem;*/
     color: #23303e;
+    font-size: 2em;
+    /*border: 1px solid red;  */
+  }
+  header .top-bar .menu ul li a.cta {
+    width: 9rem;
+    background: #fad400;
+    margin: 0 auto;
   }
 
   .hero h1 {
@@ -515,7 +524,54 @@ footer .menu ul li a {
     font-size: 1.2rem;
   }
   .grid-features div.service1, .grid-features div.service2 {
+    padding: 25rem 1rem 0 1rem;
     height: 37.5em;
+  }
+  .grid-features div.service1 h3, .grid-features div.service2 h3 {
+    font-size: 1.5rem;
+  }
+  .grid-features div.service1 p, .grid-features div.service2 p {
+    font-size: 1rem;
+  }
+
+  .testimonials {
+    padding: 2em 1em;
+    font-size: 2rem;
+  }
+  .testimonials .clients {
+    display: block;
+  }
+  .testimonials .clients > div {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1em;
+  }
+  .testimonials .clients > div p {
+    text-align: center;
+    width: 93%;
+    height: auto;
+    margin: 1.5em auto;
+    padding-bottom: 0;
+    line-height: 1.7em;
+    font-size: 0.5em;
+    color: #5a636c;
+  }
+  .testimonials .clients > div h3 {
+    font-size: 0.5em;
+    font-weight: 900;
+    /*border: 1px solid black;*/
+    margin: 2em auto 0 auto;
+  }
+  .testimonials .clients > div > div {
+    padding-top: 0;
+    font-size: 0.5em;
+    color: #a7abae;
+    border: 1px dashed green;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 }
 /*-----------------------------------------End First Breaking Point*/
