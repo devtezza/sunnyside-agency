@@ -484,125 +484,122 @@ footer {
 
 /*--------------------------------------------------First Breaking Point*/
 @media screen and (max-width: 768px) {
-    
+    header {
+        height: 30rem;
+    } 
+
+
     header .top-bar {
+        
         padding-top: 3em;
         .logo {
             width: 32em;
             /*border: 1px solid red;*/
         }
+
         .menu-hamburger {
+            display: block;
+            opacity: 1;
+            visibility: visible;         
+        } 
+
+        .menu {
             /*border: 1px solid red;*/
+            position: fixed;
+            top: 10em;
+            left: -50em;
+            z-index: 998;
+            margin: 0 auto;
+            width: 85%;
+            height: 30em;
+            opacity: 0;
+            visibility: hidden;
+            overflow-y: visible;                
+                .bubble {
+                    position: relative;                    
+                    padding: 0;                    
+                    width: 100%;
+                    height: 100%;                    
+                    background: white;
+                }
+                .bubble:after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: -3em;
+                    display: block;
+                    width: 0;
+                    z-index: 999;
+                    border-style: solid;
+                    border-width: 0 0 5em 5em;
+                    border-color: transparent transparent white transparent;
+
+                    
+                    /*margin-left: -10em;*/
+                }     
+
+                &.active {
+                    left: 2%;
+                    right: 2%;                    
+                    opacity: 1;
+                    visibility: visible;                        
+                }
+
+                ul {
+                    width: 100%;
+                    height: auto;                    
+                    padding: 0;
+                        li {
+                           display: block;
+                           margin: 0;
+
+                            a {
+                              padding: 0.75rem 1rem;
+                              color: $vdd-blue;  
+                            }          
+                    } 
+            }
+           
+        }
+        
+    }
+
+    .hero {
+        h1 {
+            /*border: 1px solid red;*/
+            max-width: 83%;
+            margin: 0 auto;
+            padding: 1.5em 0;
+        }
+        
+    } 
+ 
+    .grid-features {
+        display: block;
+        div {
+            &.image1, &.image2 {
+            height: 20em;
+            }
+
+            &.text1, &.text2 {
+                height: 27.5rem;
+                font-size: 2rem;
+                padding: 4rem 2rem 3rem 2rem;
+                text-align: center;
+                line-height: 2rem;
+                p {
+                    font-size: 1.2rem;
+                }                    
+            }
+
+            &.service1, &.service2 {
+                height: 37.5em;
+            }
         }
     }
 
-    header .menu {
-        border: 1px solid red;
-        position: fixed;
-        top: 5em;
-        left: -50em;
-        width: 50em;
-        height: 50%;
-        padding: 1em 0;
-        z-index: 999;
-        /*opacity: 0;*/
-        overflow-y: auto;
-        /*visibility: hidden;*/
-        /*left: 0;*/
-        opacity: 0;
-        visibility: hidden;        
-
-         &.active {
-            left: 0rem;
-            opacity: 1;
-            visibility: visible;
-         }
-            
-
-        
-      }
-        .menu ul {
-             width: 100%;
-             height: auto;
-             margin-top: 3.5rem;
-             padding: 0;
-
-            /* > {*/
-                li {
-                   display: block;
-                   margin: 0;
-                   border: 1px solid black;                   
-                }
-
-                
-                li {
-                   > a {
-                      padding: 0.75rem 1rem;
-                      /*color: $color-black;
-                      border-bottom: 1px solid darken($color-white, 5);*/
-                }
-
-                   /*&:first-child > a {
-                      border-top: 1px solid darken($color-white, 5);
-                    }
-
-                   > a .expand {
-                      &::before,
-                      &::after {
-                         background: $color-black;
-                        }
-                    }*/
-                }
-               
-           /* }*/
-        }
-
-        .menu-hamburger {
-             display: block;
-             opacity: 1;
-             visibility: visible;         
-        }
-
-        .grid-features {
-            display: block;
-            div {
-                &.image1, &.image2 {
-                height: 20em;
-                }
-
-                &.text1, &.text2 {
-                    height: 27.5rem;
-                    font-size: 2rem;
-                    padding: 4rem 2rem 3rem 2rem;
-                    text-align: center;
-                    line-height: 2rem;
-                    p {
-                        font-size: 1.2rem;
-                    }                    
-                }
-
-                &.service1, &.service2 {
-                    height: 37.5em;
-                }
-            }
-        }
-
-        
-
-        /*.image2 {
-    
-            background-image: url('../images/mobile/image-stand-out.jpg');
-            background-repeat: no-repeat; 
-            background-position: center;
-            background-size: cover;
-            grid-area: img2;   
-              
-        }*/
-
-
-   
-    
-}
+ 
+} /*-----------------------------------------End First Breaking Point*/
 
 @media screen and (max-width: 648px) {
     .grid-features {
