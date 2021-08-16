@@ -57,6 +57,12 @@ html, body {
     
 }
 
+body {
+    &.scrolling {
+      overflow-y: hidden;
+   }
+}z
+
 h1, h2, h3 {
     font-family: 'Fraunces', serif;    
 }
@@ -112,6 +118,17 @@ li {
     /*transform: rotate(0deg);
     transition: all 0.35s ease;*/
 }
+
+.outside-menu {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;      
+   }
 
 
 
@@ -490,6 +507,12 @@ footer {
 @media screen and (max-width: 768px) {
     header {
         height: 30rem;
+        .outside-menu {
+         &.active {
+            display: block;            
+            visibility: visible;
+            }
+        } 
     } 
 
 
@@ -657,6 +680,39 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
+
+    footer {
+        padding-top: 4rem;
+        font-size: 1.2rem;
+        .logo {
+            /*border: 1px solid red;*/
+            margin-top: 0;
+            padding: 0;           
+        }
+        .menu {
+            ul {
+                padding-left: 0;
+                padding-right: 0;                
+                display: flex;
+                justify-content: space-around;
+                li {
+                    /*border: 1px solid red;*/
+                    padding: 1rem 0;
+                    /*&:first-child{
+                        padding-left: 0;
+                        
+                    }
+                    &:last-child{
+                        padding-right: 0;
+                        
+                    }*/ 
+                    a {
+                        color: $footer-text;      
+                    }  
+                }
+            }        
+        }
+    }
     
 
  
@@ -716,5 +772,3 @@ footer {
     }
 }
 
-/*--------------------------------------------------End First Breaking Point*/
-      

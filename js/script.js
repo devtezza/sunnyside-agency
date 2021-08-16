@@ -1,26 +1,19 @@
 const menuHamburger = document.querySelector('.menu-hamburger');
-/*const closedMenu = document.querySelector('.closed-menu');*/
 const navbarMenu = document.querySelector('.menu');
-/*const menuOverlay = document.querySelector('.overlay');*/
+const outsideMenu = document.querySelector('.outside-menu');
 
-// Opened navbarMenu
-// Closed navbarMenu
-// Closed navbarMenu by Click Outside
+
+// Open and Close navbarMenu by clik on menuHambuerger
+// Open and Close navbarMenu by Click Outside
 menuHamburger.addEventListener('click', toggleMenu);
-/*closedMenu.addEventListener('click', toggleMenu);*/
-/*menuOverlay.addEventListener('click', toggleMenu);*/
+outsideMenu.addEventListener('click', toggleMenu);
 
 // Toggle Menu Function
 function toggleMenu() {
-    if (navbarMenu.classList.contains('active')) {        
-        navbarMenu.classList.toggle('active');
-    }
-    /*menuOverlay.classList.toggle('active');*/
-    else {
-        navbarMenu.classList.toggle('active');
-        document.body.classList.toggle('scrolling');
-    }
-    
+   
+    navbarMenu.classList.toggle('active');
+    outsideMenu.classList.toggle('active');
+    document.body.classList.toggle('scrolling');
     
 }
 

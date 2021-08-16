@@ -45,7 +45,12 @@ html, body {
   font-weight: 600;
 }
 
-h1, h2, h3 {
+body.scrolling {
+  overflow-y: hidden;
+}
+
+z h1,
+h2, h3 {
   font-family: "Fraunces", serif;
 }
 
@@ -96,6 +101,17 @@ li {
   background: none;
   /*transform: rotate(0deg);
   transition: all 0.35s ease;*/
+}
+
+.outside-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /*------------------------ HEADER ---------------------------------*/
@@ -427,6 +443,10 @@ footer .menu ul li a {
   header {
     height: 30rem;
   }
+  header .outside-menu.active {
+    display: block;
+    visibility: visible;
+  }
 
   header .top-bar {
     padding-top: 3em;
@@ -573,6 +593,37 @@ footer .menu ul li a {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
+
+  footer {
+    padding-top: 4rem;
+    font-size: 1.2rem;
+  }
+  footer .logo {
+    /*border: 1px solid red;*/
+    margin-top: 0;
+    padding: 0;
+  }
+  footer .menu ul {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .menu ul li {
+    /*border: 1px solid red;*/
+    padding: 1rem 0;
+    /*&:first-child{
+        padding-left: 0;
+
+    }
+    &:last-child{
+        padding-right: 0;
+
+    }*/
+  }
+  footer .menu ul li a {
+    color: #458c7e;
+  }
 }
 /*-----------------------------------------End First Breaking Point*/
 @media screen and (max-width: 648px) {
@@ -611,6 +662,5 @@ footer .menu ul li a {
     font-size: 1.1rem;
   }
 }
-/*--------------------------------------------------End First Breaking Point*/
 
 /*# sourceMappingURL=style.css.map */
