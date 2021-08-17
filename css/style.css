@@ -50,19 +50,18 @@ body.scrolling {
   overflow-y: hidden;
 }
 
-z h1,
-h2, h3 {
+h1, h2, h3 {
   font-family: "Fraunces", serif;
 }
 
 h1 {
-  font-size: 1.6em;
+  font-size: 1.5rem;
   font-weight: 900;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.25rem;
 }
 
 p {
-  font-size: 0.5em;
+  font-size: 0.5rem;
 }
 
 img {
@@ -76,7 +75,7 @@ a {
 li {
   list-style: none;
   display: inline-block;
-  padding: 1em;
+  padding: 0.5rem;
 }
 
 .menu {
@@ -93,8 +92,8 @@ li {
 .menu-hamburger {
   display: none;
   cursor: pointer;
-  width: 7em;
-  height: 4em;
+  width: 4rem;
+  height: 2.5rem;
   border: none;
   outline: none;
   opacity: 0;
@@ -116,7 +115,7 @@ li {
 /*------------------------ HEADER ---------------------------------*/
 header {
   /*border: 2px solid black;*/
-  height: 21.5em;
+  height: 21.5rem;
   background-image: url("../images/desktop/image-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -129,7 +128,7 @@ header .top-bar {
   max-width: 100%;
   height: auto;
   padding: 0;
-  font-size: 0.5em;
+  font-size: 0.5rem;
   /*border: 1px solid red;*/
 }
 header .top-bar img {
@@ -137,11 +136,11 @@ header .top-bar img {
   /*border: 1px solid black;*/
 }
 header .top-bar ul {
-  padding-right: 2em;
+  padding-right: 0.5rem;
   /*border: 1px solid black;*/
 }
 header .top-bar ul li:nth-child(-n+3) a {
-  padding: 0.4em;
+  padding-right: 0.2rem;
   font-weight: 600;
   color: white;
   /*border: 1px solid red;*/
@@ -149,26 +148,26 @@ header .top-bar ul li:nth-child(-n+3) a {
 
 .logo {
   /*line-height: 2em;*/
-  width: 19em;
-  padding-left: 2.2em;
+  width: 9rem;
+  padding-left: 1rem;
   /*border: 1px solid white;*/
 }
 
 .hero {
-  padding-top: 1em;
+  padding-top: 1rem;
   text-align: center;
   color: white;
 }
 .hero h1 {
-  margin-bottom: 1.5em;
+  margin-bottom: 2.5rem;
 }
 
 .cta {
   font-family: "Fraunces", serif;
-  font-size: 0.85em;
+  font-size: 0.4rem;
   font-weight: 900;
-  padding: 1.2em 2em;
-  border-radius: 1.8em;
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.9rem;
   background: white;
   color: #23303e;
 }
@@ -183,13 +182,14 @@ header .top-bar ul li:nth-child(-n+3) a {
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "txt1 img1" "img2 txt2" "svc1 svc2 ";
+  line-height: 1.5rem;
 }
 .grid-features section {
   text-align: center;
 }
 .grid-features div {
-  border: 1px dashed green;
-  height: 16em;
+  /*border: 1px dashed green;*/
+  height: 16rem;
   /*text-align: center;*/
 }
 
@@ -238,25 +238,25 @@ header .top-bar ul li:nth-child(-n+3) a {
 }
 
 .text1, .text2 {
-  padding: 3em 2.6em 3em 4em;
+  padding: 3rem 2.6rem 3rem 4rem;
 }
 .text1 h2, .text1 a, .text2 h2, .text2 a {
   font-weight: 900;
   color: #23303e;
 }
 .text1 h2, .text2 h2 {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
 .text1 p, .text2 p {
-  line-height: 1.8em;
+  line-height: 0.9rem;
   color: #818498;
 }
 .text1 a, .text2 a {
   font-family: "Fraunces", serif;
-  font-size: 0.45em;
+  font-size: 0.45rem;
   text-transform: uppercase;
   position: relative;
-  margin-top: 2em;
+  margin-top: 2rem;
   z-index: 0;
 }
 .text1 span, .text2 span {
@@ -264,11 +264,11 @@ header .top-bar ul li:nth-child(-n+3) a {
   z-index: -1;
   display: inline-block;
   transition: background 500ms ease;
-  width: 8em;
-  height: 0.6em;
-  margin-left: -7.6em;
-  margin-top: 1.9em;
-  border-radius: 0.2em;
+  width: 3.8rem;
+  height: 0.3rem;
+  margin-left: -3.55rem;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
 }
 .text1 .link-decoration-1, .text2 .link-decoration-1 {
   background: rgba(250, 212, 0, 0.3);
@@ -277,7 +277,7 @@ header .top-bar ul li:nth-child(-n+3) a {
   background: rgba(254, 120, 103, 0.3);
 }
 .text1 a:hover span, .text2 a:hover span {
-  transition: background 500ms ease;
+  transition: background 500ms linear;
 }
 .text1 a:hover .link-decoration-1, .text2 a:hover .link-decoration-1 {
   background: #fad400;
@@ -288,34 +288,34 @@ header .top-bar ul li:nth-child(-n+3) a {
 
 .service1, .service2 {
   text-align: center;
-  padding: 10em 4.5em 0 4.5em;
+  padding: 9.5rem 4.5rem 0 4.5rem;
 }
 .service1 h3, .service2 h3 {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   font-weight: 900;
 }
 .service1 p, .service2 p {
-  font-size: 0.45em;
+  font-size: 0.45rem;
   font-weight: 600;
-  line-height: 1.5em;
+  line-height: 0.7rem;
 }
 
 .testimonials {
-  padding: 4em 0;
+  padding: 4rem 0;
   /*border: 3px dotted red;*/
   /*box-sizing: border-box;*/
 }
 .testimonials h2 {
   text-align: center;
-  font-size: 0.52em;
+  font-size: 0.52rem;
   text-transform: uppercase;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.3rem;
   font-weight: 900;
   color: #a7abae;
 }
 
 .clients {
-  margin-top: 2em;
+  margin-top: 2rem;
   max-width: 100%;
   display: flex;
   justify-content: center;
@@ -326,10 +326,10 @@ header .top-bar ul li:nth-child(-n+3) a {
   /*border: 1px solid green;*/
   text-align: center;
   max-width: 28%;
-  height: 10em;
+  height: 10rem;
 }
 .clients > div img {
-  max-width: 1.9em;
+  max-width: 1.9rem;
   border-radius: 50%;
   /*margin-bottom: 0;*/
 }
@@ -338,22 +338,22 @@ header .top-bar ul li:nth-child(-n+3) a {
   width: 93%;
   height: 30%;
   /*border: 1px dashed red;*/
-  margin: 3.5em auto 0 auto;
+  margin: 1.5rem auto 0 auto;
   padding-bottom: 0;
-  line-height: 1.7em;
-  font-size: 0.5em;
+  line-height: 0.9rem;
+  font-size: 0.5rem;
   color: #5a636c;
 }
 .clients > div h3 {
-  font-size: 0.5em;
+  font-size: 0.5rem;
   font-weight: 900;
   /*border: 1px solid black;*/
-  margin: 2em auto 0 auto;
+  margin: 1.5rem auto 0 auto;
 }
 .clients > div > div {
   margin-top: 0.5em;
   padding-top: 0;
-  font-size: 0.5em;
+  font-size: 0.4rem;
   color: #a7abae;
   /*border: 1px dashed green;*/
 }
@@ -456,7 +456,8 @@ footer .menu ul li a:hover {
 /*--------------------------------------------------First Breaking Point*/
 @media screen and (max-width: 768px) {
   header {
-    height: 30rem;
+    height: 34rem;
+    background-image: url("../images/mobile/image-header.jpg");
   }
   header .outside-menu.active {
     display: block;
@@ -464,10 +465,10 @@ footer .menu ul li a:hover {
   }
 
   header .top-bar {
-    padding-top: 3em;
+    padding-top: 2rem;
   }
   header .top-bar .logo {
-    width: 32em;
+    width: 16rem;
     /*border: 1px solid red;*/
   }
   header .top-bar .menu-hamburger {
@@ -478,12 +479,12 @@ footer .menu ul li a:hover {
   header .top-bar .menu {
     /*border: 1px solid red;*/
     position: fixed;
-    top: 10em;
-    right: -50em;
+    top: 7rem;
+    right: -50rem;
     z-index: 998;
     margin: 0 auto;
-    width: 90%;
-    height: 30em;
+    max-width: 40em;
+    height: 20rem;
     opacity: 0;
     visibility: hidden;
     overflow-y: visible;
@@ -500,65 +501,97 @@ footer .menu ul li a:hover {
     content: "";
     position: absolute;
     right: 0;
-    top: -3em;
+    top: -2rem;
     display: block;
     width: 0;
     z-index: 999;
     border-style: solid;
-    border-width: 0 0 5em 5em;
+    border-width: 0 0 5rem 5rem;
     border-color: transparent transparent white transparent;
   }
   header .top-bar .menu.active {
-    left: 1em;
-    right: 1em;
+    left: 1rem;
+    right: 1rem;
     opacity: 1;
     visibility: visible;
     transition: all 350ms ease-out;
   }
   header .top-bar .menu ul {
-    width: 100%;
+    width: 50%;
+    margin: auto;
     height: auto;
-    padding: 1em 0;
-    text-align: center;
+    padding: 2rem 0;
+    /*text-align: center;*/
   }
   header .top-bar .menu ul li {
     display: block;
+  }
+  header .top-bar .menu ul li:nth-child(n+2) {
+    padding-top: 1.5rem;
     /*border: 1px solid green;*/
   }
   header .top-bar .menu ul li a {
     /*padding: 1rem 1rem;*/
-    color: #23303e;
-    font-size: 2em;
-    /*border: 1px solid red;  */
+    text-align: center;
+    color: #5a636c;
+    font-size: 1.2rem;
+    /*border: 1px solid red;*/
   }
   header .top-bar .menu ul li a.cta {
-    width: 9rem;
+    font-family: "Fraunces", serif;
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 1.2rem 0.5rem;
+    border-radius: 2rem;
     background: #fad400;
-    margin: 0 auto;
+    color: #23303e;
+  }
+  header .top-bar .menu ul li a.cta:hover {
+    background: #70cfff;
+    color: white;
   }
 
   .hero h1 {
     /*border: 1px solid red;*/
-    max-width: 83%;
+    /*max-width: 83%;*/
     margin: 0 auto;
-    padding: 1.5em 0;
+    padding: 3.5rem 0;
+    font-size: 2.5rem;
   }
 
   .grid-features {
     display: block;
+    /*font-size: 10rem;*/
   }
   .grid-features div.image1, .grid-features div.image2 {
-    height: 20em;
+    height: 20rem;
   }
   .grid-features div.text1, .grid-features div.text2 {
+    border: 1px solid red;
     height: 27.5rem;
-    font-size: 2rem;
-    padding: 4rem 2rem 3rem 2rem;
+    padding: 1rem 1rem;
     text-align: center;
-    line-height: 2rem;
+  }
+  .grid-features div.text1 h2, .grid-features div.text2 h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
   }
   .grid-features div.text1 p, .grid-features div.text2 p {
     font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+  .grid-features div.text1 a, .grid-features div.text2 a {
+    font-size: 1rem;
+    /*border: 1px solid green;*/
+  }
+  .grid-features div.text1 a span, .grid-features div.text2 a span {
+    width: 8.5rem;
+    height: 0.5rem;
+    margin-left: -7.9rem;
+    margin-top: 1em;
+    border-radius: 0.2em;
   }
   .grid-features div.service1, .grid-features div.service2 {
     padding: 25rem 1rem 0 1rem;
@@ -643,41 +676,58 @@ footer .menu ul li a:hover {
   }
 }
 /*-----------------------------------------End First Breaking Point*/
-@media screen and (max-width: 648px) {
-  .grid-features div.text1, .grid-features div.text2 {
-    /*height: 27.5rem;
-    font-size: 2rem;*/
-    padding: 3rem 1.5rem 2rem 1.5rem;
-    /*text-align: center;
-    line-height: 2rem;
-    p {
-        font-size: 1.1rem;
-    }*/
-  }
-}
-@media screen and (max-width: 375px) {
-  .grid-features div.text1, .grid-features div.text2 {
-    /*height: 27.5rem;*/
-    font-size: 2rem;
-    padding: 2rem 1rem 1rem 1rem;
-    /*text-align: center;
-    line-height: 2rem;
-    p {
-        font-size: 1.1rem;
-    }*/
-  }
-}
-@media screen and (max-width: 344px) {
-  .grid-features div.text1, .grid-features div.text2 {
-    /*height: 27.5rem;*/
-    font-size: 2rem;
-    padding: 1rem;
-    /*text-align: center;
-    line-height: 2rem;*/
-  }
-  .grid-features div.text1 p, .grid-features div.text2 p {
+/*@media screen and (max-width: 648px) {
+    .grid-features {
+        div {
+            &.text1, &.text2 {
+                /*height: 27.5rem;
+                font-size: 2rem;*/
+/*padding: 3rem 1.5rem 2rem 1.5rem;
+/*text-align: center;
+line-height: 2rem;
+p {
     font-size: 1.1rem;
-  }
+}*/
+/*}
+        }
+    }
 }
+
+
+
+@media screen and (max-width: 375px) {
+    .grid-features {
+        div {
+            &.text1, &.text2 {
+                /*height: 27.5rem;*/
+/*font-size: 2rem;
+padding: 2rem 1rem 1rem 1rem;
+/*text-align: center;
+line-height: 2rem;
+p {
+    font-size: 1.1rem;
+}*/
+/* }
+        }
+    }
+}
+
+
+@media screen and (max-width: 344px) {
+    .grid-features {
+        div {
+            &.text1, &.text2 {
+                /*height: 27.5rem;*/
+/*font-size: 2rem;
+padding: 1rem;
+/*text-align: center;
+line-height: 2rem;*/
+/* p {
+                    font-size: 1.1rem;
+                }                   
+            }
+        }
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */
