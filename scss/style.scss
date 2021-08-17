@@ -19,15 +19,16 @@ html {
 
 /*PRIMARY COLORS*/
 $soft-red: hsl(7, 99%, 70%); /*Soft Red*/
-$soft-red-opacity: hsla(7, 99%, 70%, 0.4); /*Soft Red with opacity*/
+$soft-red-opacity: hsla(7, 99%, 70%, 0.3); /*Soft Red with opacity*/
 $yellow: hsl(51, 100%, 49%); /*Yellow*/
-$yellow-opacity: hsla(51, 100%, 49%, 0.4); /*Yellow with opacity*/
+$yellow-opacity: hsla(51, 100%, 49%, 0.3); /*Yellow with opacity*/
 $graph-cyan: hsl(167, 40%, 24%); /*Dark desaturated cyan (graphic design text)*/
 $photo-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
 $footer-text: hsl(168, 34%, 41%); /*Dark moderate cyan (footer text)*/
 /*$footer-icons: hsl(166, 47%, 29%);*/
 $footer-bg: hsl(167, 44%, 70%); /*Middle Blue Green* (footer background)*/
 $attr-color: hsl(228, 45%, 44%); /*Footer attribution color*/
+$top-bar-blue: hsl(200, 100%, 72%); /*Top bar button hover color*/
 
 /*NEUTRAL COLORS*/
 $vdd-blue: hsl(212, 27%, 19%); /*Very dark desaturated blue*/
@@ -115,8 +116,7 @@ li {
     opacity: 0;
     visibility: visible;
     background: none;
-    /*transform: rotate(0deg);
-    transition: all 0.35s ease;*/
+    
 }
 
 .outside-menu {
@@ -195,6 +195,10 @@ header {
     border-radius: 1.8em;
     background: $white;
     color: $vdd-blue;
+        &:hover {
+            background: $top-bar-blue;
+            color: $white;
+        }
 }    
 
 /*------------------------ MAIN ---------------------------------*/
@@ -297,7 +301,7 @@ header {
         position: absolute;
         z-index: -1;
         display: inline-block;
-        /*transition: background 1s ease-out;*/        
+        transition: background 500ms ease;   
         width: 8em;
         height: 0.6em;
         margin-left: -7.6em;        
@@ -306,9 +310,7 @@ header {
         
     }
 
-    /*a:hover span {
-        transition: background 1s ease-in;
-    } */
+    
 
     .link-decoration-1 {
         background: $yellow-opacity;        
@@ -319,6 +321,9 @@ header {
         
     }
 
+    a:hover span {
+        transition: background 500ms ease;
+    } 
     
     a:hover {
         .link-decoration-1 {            
@@ -444,16 +449,19 @@ footer {
             padding-right: 0;    
             li {
                 padding: 1.2em 1.5em;
-                &:first-child{
+                &:first-child {
                     padding-left: 0;
                     /*border: 1px solid yellow;*/
                 }
-                &:last-child{
+                &:last-child {
                     padding-right: 0;
                     /*border: 1px solid yellow;*/
                 } 
                 a {
-                    color: $footer-text;      
+                    color: $footer-text;
+                    &:hover {
+                        color: $white;
+                    }      
                 }  
             }
         }        
@@ -478,7 +486,17 @@ footer {
             &:last-child{
                 padding-right: 0;
                 /*border: 1px solid yellow;*/
-            } 
+            }
+                a {
+                    color: $footer-text;
+                    &:hover {
+                        /*color: $white;*/
+                        img {
+                            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(200%) contrast(101%);
+                        }
+                    } 
+                }
+
         }
         img {
            max-width: 100%;
@@ -534,14 +552,15 @@ footer {
             /*border: 1px solid red;*/
             position: fixed;
             top: 10em;
-            left: -50em;
+            right: -50em;
             z-index: 998;
             margin: 0 auto;
             width: 90%;
             height: 30em;
             opacity: 0;
             visibility: hidden;
-            overflow-y: visible;                
+            overflow-y: visible;
+            /*transition: all 100ms linear;*/
                 .bubble {
                     position: relative;                    
                     padding: 0;                    
@@ -566,7 +585,8 @@ footer {
                     left: 1em;
                     right: 1em;                    
                     opacity: 1;
-                    visibility: visible;                        
+                    visibility: visible;
+                    transition: all 350ms ease-out;                        
                 }
 
                 ul {
@@ -586,7 +606,8 @@ footer {
                                 &.cta {
                                     width: 9rem;
                                     background: $yellow;
-                                    margin: 0 auto;                                    
+                                    margin: 0 auto;
+                                                                  
                                 }
                             }          
                     } 
