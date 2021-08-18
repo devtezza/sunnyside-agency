@@ -38,7 +38,7 @@
 html, body {
   /*background: $white;*/
   max-width: 1440px;
-  min-width: 200px;
+  min-width: 250px;
   /*border: 1px solid red;*/
   margin: 0 auto;
   padding: 0;
@@ -362,6 +362,34 @@ header .top-bar ul li:nth-child(-n+3) a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+.gallery div {
+  height: 12rem;
+  /*border: 1px solid red;*/
+}
+.gallery div.img1 {
+  background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.gallery div.img2 {
+  background-image: url("../images/desktop/image-gallery-orange.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.gallery div.img3 {
+  background-image: url("../images/desktop/image-gallery-cone.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.gallery div.img4 {
+  background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 /*------------------------ FOOTER ---------------------------------*/
 footer {
@@ -458,6 +486,7 @@ footer .menu ul li a:hover {
   header {
     height: 34rem;
     background-image: url("../images/mobile/image-header.jpg");
+    background-position: center bottom;
   }
   header .outside-menu.active {
     display: block;
@@ -481,9 +510,9 @@ footer .menu ul li a:hover {
     position: fixed;
     top: 7rem;
     right: -50rem;
-    z-index: 998;
+    z-index: 999;
     margin: 0 auto;
-    max-width: 40em;
+    max-width: 40rem;
     height: 20rem;
     opacity: 0;
     visibility: hidden;
@@ -510,8 +539,8 @@ footer .menu ul li a:hover {
     border-color: transparent transparent white transparent;
   }
   header .top-bar .menu.active {
-    left: 1rem;
-    right: 1rem;
+    left: 2rem;
+    right: 2rem;
     opacity: 1;
     visibility: visible;
     transition: all 350ms ease-out;
@@ -520,14 +549,14 @@ footer .menu ul li a:hover {
     width: 50%;
     margin: auto;
     height: auto;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     /*text-align: center;*/
   }
   header .top-bar .menu ul li {
     display: block;
   }
   header .top-bar .menu ul li:nth-child(n+2) {
-    padding-top: 1.5rem;
+    padding-top: 1.6rem;
     /*border: 1px solid green;*/
   }
   header .top-bar .menu ul li a {
@@ -555,7 +584,7 @@ footer .menu ul li a:hover {
   .hero h1 {
     /*border: 1px solid red;*/
     /*max-width: 83%;*/
-    margin: 0 auto;
+    margin: 0 1rem;
     padding: 3.5rem 0;
     font-size: 2.5rem;
   }
@@ -565,12 +594,12 @@ footer .menu ul li a:hover {
     /*font-size: 10rem;*/
   }
   .grid-features div.image1, .grid-features div.image2 {
-    height: 20rem;
+    height: 16rem;
   }
   .grid-features div.text1, .grid-features div.text2 {
-    border: 1px solid red;
-    height: 27.5rem;
-    padding: 1rem 1rem;
+    /*border: 1px solid red;*/
+    height: auto;
+    padding: 2rem 1rem 3rem 1rem;
     text-align: center;
   }
   .grid-features div.text1 h2, .grid-features div.text2 h2 {
@@ -594,19 +623,23 @@ footer .menu ul li a:hover {
     border-radius: 0.2em;
   }
   .grid-features div.service1, .grid-features div.service2 {
-    padding: 25rem 1rem 0 1rem;
-    height: 37.5em;
+    padding: 18rem 1rem 0 1rem;
+    height: 30rem;
   }
   .grid-features div.service1 h3, .grid-features div.service2 h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
   .grid-features div.service1 p, .grid-features div.service2 p {
     font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .testimonials {
-    padding: 2em 1em;
-    font-size: 2rem;
+    padding: 3rem 1rem;
+  }
+  .testimonials h2 {
+    font-size: 1rem;
   }
   .testimonials .clients {
     display: block;
@@ -614,34 +647,66 @@ footer .menu ul li a:hover {
   .testimonials .clients > div {
     max-width: 100%;
     height: auto;
-    margin-top: 1em;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    /*border: 1px solid red;*/
+  }
+  .testimonials .clients > div img {
+    max-width: 4.5rem;
   }
   .testimonials .clients > div p {
     text-align: center;
-    width: 93%;
     height: auto;
-    margin: 1.5em auto;
+    margin: 1.8rem auto;
     padding-bottom: 0;
-    line-height: 1.7em;
-    font-size: 0.5em;
+    line-height: 2rem;
+    font-size: 1.1rem;
     color: #5a636c;
   }
   .testimonials .clients > div h3 {
-    font-size: 0.5em;
+    font-size: 1.2rem;
     font-weight: 900;
     /*border: 1px solid black;*/
-    margin: 2em auto 0 auto;
+    margin: 2rem auto 0.8rem auto;
   }
   .testimonials .clients > div > div {
     padding-top: 0;
-    font-size: 0.5em;
+    font-size: 0.9rem;
     color: #a7abae;
-    border: 1px dashed green;
+    /*border: 1px dashed green;*/
   }
 
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    /*div {
+    height: 12rem;
+    border: 1px solid red;
+        &.img1 {    
+            background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;           
+        }
+        &.img2 {    
+            background-image: url('../images/mobile/image-gallery-orange.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;           
+        }
+        &.img3 {    
+            background-image: url('../images/mobile/image-gallery-cone.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;           
+        }
+        &.img4 {    
+            background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-size: cover;           
+        }
+    }*/
   }
 
   footer {
@@ -676,58 +741,59 @@ footer .menu ul li a:hover {
   }
 }
 /*-----------------------------------------End First Breaking Point*/
-/*@media screen and (max-width: 648px) {
-    .grid-features {
-        div {
-            &.text1, &.text2 {
-                /*height: 27.5rem;
-                font-size: 2rem;*/
-/*padding: 3rem 1.5rem 2rem 1.5rem;
-/*text-align: center;
-line-height: 2rem;
-p {
-    font-size: 1.1rem;
-}*/
-/*}
-        }
-    }
-}
-
-
-
+/*-----------------------------------------Second Breaking Point (Mobile)*/
 @media screen and (max-width: 375px) {
-    .grid-features {
-        div {
-            &.text1, &.text2 {
-                /*height: 27.5rem;*/
-/*font-size: 2rem;
-padding: 2rem 1rem 1rem 1rem;
-/*text-align: center;
-line-height: 2rem;
-p {
-    font-size: 1.1rem;
-}*/
-/* }
-        }
-    }
+  .grid-features div.image1, .grid-features div.image2 {
+    height: 25rem;
+  }
+  .grid-features div.text1, .grid-features div.text2 {
+    height: 27.5rem;
+    padding: 1rem;
+  }
+  .grid-features div.service1, .grid-features div.service2 {
+    padding: 24rem 1rem 0 1rem;
+    height: 37.5rem;
+  }
 }
+/*-----------------------------------------End Second Breaking Point (Mobile)*/
+/*-----------------------------------------Fourth Breaking Point*/
+@media screen and (max-width: 350px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
 
+  .grid-features div.image1, .grid-features div.image2 {
+    height: 12rem;
+  }
+  .grid-features div.text1, .grid-features div.text2 {
+    height: auto;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+  }
+  .grid-features div.service1, .grid-features div.service2 {
+    padding: 21rem 0 1rem 0;
+  }
+}
+/*-----------------------------------------End Fourth Breaking Point*/
+/*-----------------------------------------------Fifth Breaking Point*/
+@media screen and (max-width: 285px) {
+  header .top-bar .menu {
+    height: auto;
+  }
+  header .top-bar .menu ul {
+    width: 100%;
+    padding: 0;
+    /*border: 1px dashed green;*/
+  }
 
-@media screen and (max-width: 344px) {
-    .grid-features {
-        div {
-            &.text1, &.text2 {
-                /*height: 27.5rem;*/
-/*font-size: 2rem;
-padding: 1rem;
-/*text-align: center;
-line-height: 2rem;*/
-/* p {
-                    font-size: 1.1rem;
-                }                   
-            }
-        }
-    }
-}*/
+  .hero h1 {
+    font-size: 1.1rem;
+  }
+
+  .grid-features div.service1, .grid-features div.service2 {
+    height: auto;
+    padding-top: 15rem;
+  }
+}
+/*-------------------------------------------End Fifth Breaking Point*/
 
 /*# sourceMappingURL=style.css.map */
