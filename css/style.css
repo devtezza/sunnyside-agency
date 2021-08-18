@@ -7,8 +7,7 @@
 */
 /*------------------------ GLOBAL STYLES ---------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,600;1,100&family=Fraunces:wght@400;700;900&display=swap");
-/*@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,400;0,700;0,900;1,100&family=Fraunces:wght@400;700;900&display=swap');*/
-@media screen and (min-width: 25em) {
+@media screen and (min-width: 25em) and (max-width: 110em) {
   html {
     font-size: calc( 10px + (24 - 10) * (100vw - 100px) / (800 - 100) );
   }
@@ -21,7 +20,6 @@
 /*Dark desaturated cyan (graphic design text)*/
 /*Dark blue (photography text)*/
 /*Dark moderate cyan (footer text)*/
-/*$footer-icons: hsl(166, 47%, 29%);*/
 /*Middle Blue Green* (footer background)*/
 /*Footer attribution color*/
 /*Top bar button hover color*/
@@ -36,10 +34,8 @@
 }
 
 html, body {
-  /*background: $white;*/
   max-width: 1440px;
   min-width: 250px;
-  /*border: 1px solid red;*/
   margin: 0 auto;
   padding: 0;
   font-family: "Barlow", sans-serif;
@@ -48,6 +44,7 @@ html, body {
 
 body.scrolling {
   overflow-y: hidden;
+  /*Hide page scrolling when mobile menu is active*/
 }
 
 h1, h2, h3 {
@@ -89,6 +86,7 @@ li {
   text-transform: uppercase;
 }
 
+/*Mobile Menu Icon*/
 .menu-hamburger {
   display: none;
   cursor: pointer;
@@ -101,6 +99,7 @@ li {
   background: none;
 }
 
+/*Outside Mobile Menu Area (Open/Close menu when this area is clicked )*/
 .outside-menu {
   position: fixed;
   left: 0;
@@ -114,12 +113,12 @@ li {
 
 /*------------------------ HEADER ---------------------------------*/
 header {
-  /*border: 2px solid black;*/
   height: 21.5rem;
   background-image: url("../images/desktop/image-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /*End Top Bar*/
 }
 header .top-bar {
   display: flex;
@@ -129,40 +128,27 @@ header .top-bar {
   height: auto;
   padding: 0;
   font-size: 0.5rem;
-  /*border: 1px solid red;*/
 }
-header .top-bar img {
+header .top-bar .logo {
+  width: 9rem;
+  padding-left: 1rem;
+}
+header .top-bar .logo img {
   width: 53%;
-  /*border: 1px solid black;*/
 }
 header .top-bar ul {
   padding-right: 0.5rem;
-  /*border: 1px solid black;*/
 }
 header .top-bar ul li:nth-child(-n+3) a {
   padding-right: 0.2rem;
   font-weight: 600;
   color: white;
-  /*border: 1px solid red;*/
 }
-
-.logo {
-  /*line-height: 2em;*/
-  width: 9rem;
-  padding-left: 1rem;
-  /*border: 1px solid white;*/
+header .top-bar ul li:nth-child(-n+3) a:hover {
+  color: rgba(255, 255, 255, 0.6);
 }
-
-.hero {
-  padding-top: 1rem;
-  text-align: center;
-  color: white;
-}
-.hero h1 {
-  margin-bottom: 2.5rem;
-}
-
-.cta {
+header .top-bar ul .cta {
+  /*Top Bar Menu Button - Call To Action*/
   font-family: "Fraunces", serif;
   font-size: 0.4rem;
   font-weight: 900;
@@ -171,11 +157,20 @@ header .top-bar ul li:nth-child(-n+3) a {
   background: white;
   color: #23303e;
 }
-.cta:hover {
+header .top-bar ul .cta:hover {
   background: #70cfff;
   color: white;
 }
+header .hero {
+  padding-top: 1rem;
+  text-align: center;
+  color: white;
+}
+header .hero h1 {
+  margin-bottom: 2.5rem;
+}
 
+/*End Header*/
 /*------------------------ MAIN ---------------------------------*/
 .grid-features {
   display: grid;
@@ -183,75 +178,34 @@ header .top-bar ul li:nth-child(-n+3) a {
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "txt1 img1" "img2 txt2" "svc1 svc2 ";
   line-height: 1.5rem;
-}
-.grid-features section {
   text-align: center;
+  /*End classes .text1, .text2*/
+  /*End classes .service1, .service2*/
 }
 .grid-features div {
-  /*border: 1px dashed green;*/
   height: 16rem;
-  /*text-align: center;*/
 }
-
-.image1 {
-  background-image: url("../images/desktop/image-transform.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  grid-area: img1;
-}
-
-.image2 {
-  background-image: url("../images/desktop/image-stand-out.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  grid-area: img2;
-}
-
-.text1 {
-  grid-area: txt1;
-  /*font-size: 0.7em;*/
-  /*padding-top: 5em;*/
-}
-
-.text2 {
-  grid-area: txt2;
-}
-
-.service1 {
-  background-image: url("../images/desktop/image-graphic-design.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  grid-area: svc1;
-  color: #25564b;
-}
-
-.service2 {
-  background-image: url("../images/desktop/image-photography.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  grid-area: svc2;
-  color: #19536b;
-}
-
-.text1, .text2 {
+.grid-features .text1, .grid-features .text2 {
   padding: 3rem 2.6rem 3rem 4rem;
 }
-.text1 h2, .text1 a, .text2 h2, .text2 a {
+.grid-features .text1 .text1, .grid-features .text2 .text1 {
+  grid-area: txt1;
+}
+.grid-features .text1 .text2, .grid-features .text2 .text2 {
+  grid-area: txt2;
+}
+.grid-features .text1 h2, .grid-features .text1 a, .grid-features .text2 h2, .grid-features .text2 a {
   font-weight: 900;
   color: #23303e;
 }
-.text1 h2, .text2 h2 {
+.grid-features .text1 h2, .grid-features .text2 h2 {
   font-size: 1.1rem;
 }
-.text1 p, .text2 p {
+.grid-features .text1 p, .grid-features .text2 p {
   line-height: 0.9rem;
   color: #818498;
 }
-.text1 a, .text2 a {
+.grid-features .text1 a, .grid-features .text2 a {
   font-family: "Fraunces", serif;
   font-size: 0.45rem;
   text-transform: uppercase;
@@ -259,7 +213,7 @@ header .top-bar ul li:nth-child(-n+3) a {
   margin-top: 2rem;
   z-index: 0;
 }
-.text1 span, .text2 span {
+.grid-features .text1 span, .grid-features .text2 span {
   position: absolute;
   z-index: -1;
   display: inline-block;
@@ -270,40 +224,69 @@ header .top-bar ul li:nth-child(-n+3) a {
   margin-top: 1rem;
   border-radius: 0.2rem;
 }
-.text1 .link-decoration-1, .text2 .link-decoration-1 {
+.grid-features .text1 .link-decoration-1, .grid-features .text2 .link-decoration-1 {
   background: rgba(250, 212, 0, 0.3);
 }
-.text1 .link-decoration-2, .text2 .link-decoration-2 {
+.grid-features .text1 .link-decoration-2, .grid-features .text2 .link-decoration-2 {
   background: rgba(254, 120, 103, 0.3);
 }
-.text1 a:hover span, .text2 a:hover span {
+.grid-features .text1 a:hover span, .grid-features .text2 a:hover span {
   transition: background 500ms linear;
 }
-.text1 a:hover .link-decoration-1, .text2 a:hover .link-decoration-1 {
+.grid-features .text1 a:hover .link-decoration-1, .grid-features .text2 a:hover .link-decoration-1 {
   background: #fad400;
 }
-.text1 a:hover .link-decoration-2, .text2 a:hover .link-decoration-2 {
+.grid-features .text1 a:hover .link-decoration-2, .grid-features .text2 a:hover .link-decoration-2 {
   background: #fe7867;
 }
-
-.service1, .service2 {
+.grid-features .image1 {
+  background-image: url("../images/desktop/image-transform.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img1;
+}
+.grid-features .image2 {
+  background-image: url("../images/desktop/image-stand-out.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: img2;
+}
+.grid-features .service1, .grid-features .service2 {
   text-align: center;
   padding: 9.5rem 4.5rem 0 4.5rem;
 }
-.service1 h3, .service2 h3 {
+.grid-features .service1.service1, .grid-features .service2.service1 {
+  background-image: url("../images/desktop/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: svc1;
+  color: #25564b;
+}
+.grid-features .service1.service2, .grid-features .service2.service2 {
+  background-image: url("../images/desktop/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: svc2;
+  color: #19536b;
+}
+.grid-features .service1 h3, .grid-features .service2 h3 {
   font-size: 0.8rem;
   font-weight: 900;
 }
-.service1 p, .service2 p {
+.grid-features .service1 p, .grid-features .service2 p {
   font-size: 0.45rem;
   font-weight: 600;
   line-height: 0.7rem;
 }
 
+/*End Features Section*/
 .testimonials {
   padding: 4rem 0;
-  /*border: 3px dotted red;*/
-  /*box-sizing: border-box;*/
+  /*End class .clients*/
 }
 .testimonials h2 {
   text-align: center;
@@ -313,51 +296,47 @@ header .top-bar ul li:nth-child(-n+3) a {
   font-weight: 900;
   color: #a7abae;
 }
-
-.clients {
+.testimonials .clients {
   margin-top: 2rem;
   max-width: 100%;
   display: flex;
   justify-content: center;
-  /*align-items: flex-start;*/
-  /*border: 3px dotted black;*/
+  /*End individual client area*/
 }
-.clients > div {
-  /*border: 1px solid green;*/
+.testimonials .clients > div {
+  /*individual client area*/
   text-align: center;
   max-width: 28%;
   height: 10rem;
 }
-.clients > div img {
+.testimonials .clients > div img {
   max-width: 1.9rem;
   border-radius: 50%;
-  /*margin-bottom: 0;*/
 }
-.clients > div p {
+.testimonials .clients > div p {
   text-align: center;
   width: 93%;
   height: 30%;
-  /*border: 1px dashed red;*/
   margin: 1.5rem auto 0 auto;
   padding-bottom: 0;
   line-height: 0.9rem;
   font-size: 0.5rem;
   color: #5a636c;
 }
-.clients > div h3 {
+.testimonials .clients > div h3 {
   font-size: 0.5rem;
   font-weight: 900;
-  /*border: 1px solid black;*/
   margin: 1.5rem auto 0 auto;
 }
-.clients > div > div {
+.testimonials .clients > div > div {
+  /*client job title*/
   margin-top: 0.5em;
   padding-top: 0;
   font-size: 0.4rem;
   color: #a7abae;
-  /*border: 1px dashed green;*/
 }
 
+/*End Testimonials Section*/
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -391,11 +370,15 @@ header .top-bar ul li:nth-child(-n+3) a {
   background-size: cover;
 }
 
+/*End Gallery Section*/
 /*------------------------ FOOTER ---------------------------------*/
 footer {
   background: #91d4c6;
   padding-top: 4em;
   font-size: 0.5em;
+  /*End Footer Menu*/
+  /*End Social Bar Icons */
+  /*End attribution*/
 }
 footer .logo {
   width: 100%;
@@ -433,55 +416,55 @@ footer .menu ul li a {
 footer .menu ul li a:hover {
   color: white;
 }
-
-.social-bar {
+footer .social-bar {
   /*border: 1px solid red; */
   margin: 3.5em auto;
   text-align: center;
+  /*End </ul>*/
 }
-.social-bar ul {
+footer .social-bar ul {
   padding-left: 0;
   padding-right: 0;
-  /*border: 1px solid white;*/
   margin: 2em auto;
+  /*End </li>*/
 }
-.social-bar ul li {
+footer .social-bar ul li {
   padding: 0 0.75em;
 }
-.social-bar ul li:first-child {
+footer .social-bar ul li:first-child {
   padding-left: 0;
   /*border: 1px solid yellow;*/
 }
-.social-bar ul li:last-child {
+footer .social-bar ul li:last-child {
   padding-right: 0;
   /*border: 1px solid yellow;*/
 }
-.social-bar ul li a {
+footer .social-bar ul li a {
   color: #458c7e;
 }
-.social-bar ul li a:hover {
+footer .social-bar ul li a:hover {
   /*color: $white;*/
 }
-.social-bar ul li a:hover img {
+footer .social-bar ul li a:hover img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(200%) contrast(101%);
 }
-.social-bar ul img {
+footer .social-bar ul img {
   max-width: 100%;
 }
-
-.attribution {
+footer .attribution {
   /*border: 1px solid red; */
   font-size: 0.5em;
   text-align: center;
   margin: 0 10em;
   padding: 0;
 }
-.attribution a {
+footer .attribution a {
   color: #3e52a3;
 }
 
-/*-----------------------------  BREAKING POINTS   ------------------------*/
-/*--------------------------------------------------First Breaking Point*/
+/*End Footer*/
+/*-------------------------------  BREAKING POINTS   --------------------------*/
+/*---------------------------------------------------- #1 - Breaking Point(1/4)*/
 @media screen and (max-width: 768px) {
   header {
     height: 34rem;
@@ -495,10 +478,10 @@ footer .menu ul li a:hover {
 
   header .top-bar {
     padding-top: 2rem;
+    /*End Menu*/
   }
   header .top-bar .logo {
     width: 16rem;
-    /*border: 1px solid red;*/
   }
   header .top-bar .menu-hamburger {
     display: block;
@@ -506,7 +489,6 @@ footer .menu ul li a:hover {
     visibility: visible;
   }
   header .top-bar .menu {
-    /*border: 1px solid red;*/
     position: fixed;
     top: 7rem;
     right: -50rem;
@@ -517,7 +499,7 @@ footer .menu ul li a:hover {
     opacity: 0;
     visibility: hidden;
     overflow-y: visible;
-    /*transition: all 100ms linear;*/
+    /*End </ul>*/
   }
   header .top-bar .menu .bubble {
     position: relative;
@@ -550,21 +532,21 @@ footer .menu ul li a:hover {
     margin: auto;
     height: auto;
     padding: 2rem 0 0 0;
-    /*text-align: center;*/
+    /*End </li>*/
   }
   header .top-bar .menu ul li {
     display: block;
   }
   header .top-bar .menu ul li:nth-child(n+2) {
     padding-top: 1.6rem;
-    /*border: 1px solid green;*/
   }
   header .top-bar .menu ul li a {
-    /*padding: 1rem 1rem;*/
     text-align: center;
     color: #5a636c;
     font-size: 1.2rem;
-    /*border: 1px solid red;*/
+  }
+  header .top-bar .menu ul li a:hover {
+    color: #a7abae;
   }
   header .top-bar .menu ul li a.cta {
     font-family: "Fraunces", serif;
@@ -577,13 +559,12 @@ footer .menu ul li a:hover {
     color: #23303e;
   }
   header .top-bar .menu ul li a.cta:hover {
-    background: #70cfff;
+    background: #a7abae;
     color: white;
   }
 
+  /*End Top Bar*/
   .hero h1 {
-    /*border: 1px solid red;*/
-    /*max-width: 83%;*/
     margin: 0 1rem;
     padding: 3.5rem 0;
     font-size: 2.5rem;
@@ -591,65 +572,67 @@ footer .menu ul li a:hover {
 
   .grid-features {
     display: block;
-    /*font-size: 10rem;*/
+    /*End classes .text1, .text2*/
+    /*End classes .service1, .service2*/
   }
-  .grid-features div.image1, .grid-features div.image2 {
+  .grid-features .image1, .grid-features .image2 {
     height: 16rem;
   }
-  .grid-features div.text1, .grid-features div.text2 {
-    /*border: 1px solid red;*/
+  .grid-features .text1, .grid-features .text2 {
     height: auto;
     padding: 2rem 1rem 3rem 1rem;
     text-align: center;
   }
-  .grid-features div.text1 h2, .grid-features div.text2 h2 {
+  .grid-features .text1 h2, .grid-features .text2 h2 {
     font-size: 2rem;
     line-height: 2.5rem;
   }
-  .grid-features div.text1 p, .grid-features div.text2 p {
+  .grid-features .text1 p, .grid-features .text2 p {
     font-size: 1.2rem;
     line-height: 1.8rem;
     margin-bottom: 2.5rem;
   }
-  .grid-features div.text1 a, .grid-features div.text2 a {
+  .grid-features .text1 a, .grid-features .text2 a {
     font-size: 1rem;
-    /*border: 1px solid green;*/
   }
-  .grid-features div.text1 a span, .grid-features div.text2 a span {
+  .grid-features .text1 a span, .grid-features .text2 a span {
     width: 8.5rem;
     height: 0.5rem;
     margin-left: -7.9rem;
     margin-top: 1em;
     border-radius: 0.2em;
   }
-  .grid-features div.service1, .grid-features div.service2 {
+  .grid-features .service1, .grid-features .service2 {
     padding: 18rem 1rem 0 1rem;
     height: 30rem;
   }
-  .grid-features div.service1 h3, .grid-features div.service2 h3 {
+  .grid-features .service1 h3, .grid-features .service2 h3 {
     font-size: 1.8rem;
     line-height: 2rem;
   }
-  .grid-features div.service1 p, .grid-features div.service2 p {
+  .grid-features .service1 p, .grid-features .service2 p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 
+  /*End Features Section*/
   .testimonials {
     padding: 3rem 1rem;
+    /*End class .clients*/
   }
   .testimonials h2 {
     font-size: 1rem;
   }
   .testimonials .clients {
     display: block;
+    /*End Individual Client Area*/
   }
   .testimonials .clients > div {
+    /*Individual Client Area*/
     max-width: 100%;
     height: auto;
     margin-top: 4rem;
     margin-bottom: 3rem;
-    /*border: 1px solid red;*/
   }
   .testimonials .clients > div img {
     max-width: 4.5rem;
@@ -670,43 +653,16 @@ footer .menu ul li a:hover {
     margin: 2rem auto 0.8rem auto;
   }
   .testimonials .clients > div > div {
+    /*Client Job Title*/
     padding-top: 0;
     font-size: 0.9rem;
     color: #a7abae;
-    /*border: 1px dashed green;*/
   }
 
+  /*End Testimonials Section*/
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    /*div {
-    height: 12rem;
-    border: 1px solid red;
-        &.img1 {    
-            background-image: url('../images/mobile/image-gallery-milkbottles.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;           
-        }
-        &.img2 {    
-            background-image: url('../images/mobile/image-gallery-orange.jpg');
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-size: cover;           
-        }
-        &.img3 {    
-            background-image: url('../images/mobile/image-gallery-cone.jpg');
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-size: cover;           
-        }
-        &.img4 {    
-            background-image: url('../images/mobile/image-gallery-sugar-cubes.jpg');
-            background-repeat: no-repeat;
-            background-position: center top;
-            background-size: cover;           
-        }
-    }*/
   }
 
   footer {
@@ -740,8 +696,8 @@ footer .menu ul li a:hover {
     color: #458c7e;
   }
 }
-/*-----------------------------------------End First Breaking Point*/
-/*-----------------------------------------Second Breaking Point (Mobile)*/
+/*----------------------------------------------End #1 - Breaking Point(1/4)*/
+/*----------------------------------------- #2 - Breaking Point - Mobile (2/4)*/
 @media screen and (max-width: 375px) {
   .grid-features div.image1, .grid-features div.image2 {
     height: 25rem;
@@ -755,8 +711,8 @@ footer .menu ul li a:hover {
     height: 37.5rem;
   }
 }
-/*-----------------------------------------End Second Breaking Point (Mobile)*/
-/*-----------------------------------------Fourth Breaking Point*/
+/*--------------------------------------End #2 - Breaking Point - Mobile (2/4)*/
+/*---------------------------------------------- #3 - Breaking Point (3/4)*/
 @media screen and (max-width: 350px) {
   .hero h1 {
     font-size: 1.5rem;
@@ -773,16 +729,18 @@ footer .menu ul li a:hover {
     padding: 21rem 0 1rem 0;
   }
 }
-/*-----------------------------------------End Fourth Breaking Point*/
-/*-----------------------------------------------Fifth Breaking Point*/
+/*-----------------------------------------End #3 - Breaking Point (3/4)*/
+/*----------------------------------------------- #4- Breaking Point (4/4)*/
 @media screen and (max-width: 285px) {
   header .top-bar .menu {
-    height: auto;
+    /*border: 1px solid red;*/
   }
   header .top-bar .menu ul {
-    width: 100%;
-    padding: 0;
+    width: 95%;
     /*border: 1px dashed green;*/
+  }
+  header .top-bar .menu .bubble:after {
+    border-width: 0 0 2.5rem 2.5rem;
   }
 
   .hero h1 {
@@ -794,6 +752,6 @@ footer .menu ul li a:hover {
     padding-top: 15rem;
   }
 }
-/*-------------------------------------------End Fifth Breaking Point*/
+/*-------------------------------------------End #4- Breaking Point (4/4)*/
 
 /*# sourceMappingURL=style.css.map */
