@@ -86,31 +86,6 @@ li {
   text-transform: uppercase;
 }
 
-/*Mobile Menu Icon*/
-.menu-hamburger {
-  display: none;
-  cursor: pointer;
-  width: 4rem;
-  height: 2.5rem;
-  border: none;
-  outline: none;
-  opacity: 0;
-  visibility: visible;
-  background: none;
-}
-
-/*Outside Mobile Menu Area (Open/Close menu when this area is clicked )*/
-.outside-menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-}
-
 /*------------------------ HEADER ---------------------------------*/
 header {
   height: 21.5rem;
@@ -128,6 +103,9 @@ header .top-bar {
   height: auto;
   padding: 0;
   font-size: 0.5rem;
+  /*Mobile Menu Icon*/
+  /*Outside Mobile Menu Area (Open/Close menu when this area is clicked )*/
+  /*End Menu items and links*/
 }
 header .top-bar .logo {
   width: 9rem;
@@ -136,7 +114,29 @@ header .top-bar .logo {
 header .top-bar .logo img {
   width: 53%;
 }
+header .top-bar .menu-hamburger {
+  display: none;
+  cursor: pointer;
+  width: 3.5rem;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  opacity: 0;
+  visibility: visible;
+  background: none;
+}
+header .top-bar .outside-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+}
 header .top-bar ul {
+  /*Menu items and links*/
   padding-right: 0.5rem;
 }
 header .top-bar ul li:nth-child(-n+3) a {
@@ -464,18 +464,14 @@ footer .attribution a {
 
 /*End Footer*/
 /*-------------------------------  BREAKING POINTS   --------------------------*/
-/*---------------------------------------------------- #1 - Breaking Point(1/4)*/
+/*---------------------------------------------------- Breaking Point #1 (1/4)*/
 @media screen and (max-width: 768px) {
   header {
     height: 34rem;
     background-image: url("../images/mobile/image-header.jpg");
     background-position: center bottom;
+    /*End Top Bar*/
   }
-  header .outside-menu.active {
-    display: block;
-    visibility: visible;
-  }
-
   header .top-bar {
     padding-top: 2rem;
     /*End Menu*/
@@ -486,6 +482,10 @@ footer .attribution a {
   header .top-bar .menu-hamburger {
     display: block;
     opacity: 1;
+    visibility: visible;
+  }
+  header .top-bar .outside-menu.active {
+    display: block;
     visibility: visible;
   }
   header .top-bar .menu {
@@ -562,14 +562,14 @@ footer .attribution a {
     background: #a7abae;
     color: white;
   }
-
-  /*End Top Bar*/
-  .hero h1 {
+  header .hero h1 {
     margin: 0 1rem;
     padding: 3.5rem 0;
     font-size: 2.5rem;
   }
 
+  /*End Header*/
+  /*Features Section*/
   .grid-features {
     display: block;
     /*End classes .text1, .text2*/
@@ -603,8 +603,8 @@ footer .attribution a {
     border-radius: 0.2em;
   }
   .grid-features .service1, .grid-features .service2 {
-    padding: 18rem 1rem 0 1rem;
     height: 30rem;
+    padding: 18rem 1rem 0 1rem;
   }
   .grid-features .service1 h3, .grid-features .service2 h3 {
     font-size: 1.8rem;
@@ -616,6 +616,7 @@ footer .attribution a {
   }
 
   /*End Features Section*/
+  /*Testimonials Section*/
   .testimonials {
     padding: 3rem 1rem;
     /*End class .clients*/
@@ -660,6 +661,7 @@ footer .attribution a {
   }
 
   /*End Testimonials Section*/
+  /*Gallery Section*/
   .gallery {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -670,7 +672,6 @@ footer .attribution a {
     font-size: 1.2rem;
   }
   footer .logo {
-    /*border: 1px solid red;*/
     margin-top: 0;
     padding: 0;
   }
@@ -695,43 +696,48 @@ footer .attribution a {
   footer .menu ul li a {
     color: #458c7e;
   }
+
+  /*End Footer*/
 }
-/*----------------------------------------------End #1 - Breaking Point(1/4)*/
-/*----------------------------------------- #2 - Breaking Point - Mobile (2/4)*/
+/*---------------------------------------------- End Breaking Point #1 (1/4)*/
+/*----------------------------------------- Breaking Point #2 (2/4) - Mobile */
 @media screen and (max-width: 375px) {
-  .grid-features div.image1, .grid-features div.image2 {
-    height: 25rem;
+  .grid-features .image1, .grid-features .image2 {
+    height: 20rem;
   }
-  .grid-features div.text1, .grid-features div.text2 {
+  .grid-features .text1, .grid-features .text2 {
     height: 27.5rem;
     padding: 1rem;
   }
-  .grid-features div.service1, .grid-features div.service2 {
+  .grid-features .service1, .grid-features .service2 {
     padding: 24rem 1rem 0 1rem;
     height: 37.5rem;
   }
 }
-/*--------------------------------------End #2 - Breaking Point - Mobile (2/4)*/
-/*---------------------------------------------- #3 - Breaking Point (3/4)*/
+/*-------------------------------------- End Breaking Point #2 (2/4) - Mobile */
+/*---------------------------------------------- Breaking Point #3 (3/4)*/
 @media screen and (max-width: 350px) {
-  .hero h1 {
+  header .hero h1 {
     font-size: 1.5rem;
   }
 
-  .grid-features div.image1, .grid-features div.image2 {
+  .grid-features .image1, .grid-features .image2 {
     height: 12rem;
   }
-  .grid-features div.text1, .grid-features div.text2 {
+  .grid-features .text1, .grid-features .text2 {
     height: auto;
     padding: 1rem 0.5rem 2rem 0.5rem;
   }
-  .grid-features div.service1, .grid-features div.service2 {
+  .grid-features .service1, .grid-features .service2 {
     padding: 21rem 0 1rem 0;
   }
 }
-/*-----------------------------------------End #3 - Breaking Point (3/4)*/
-/*----------------------------------------------- #4- Breaking Point (4/4)*/
+/*-----------------------------------------End Breaking Point #3 (3/4)*/
+/*----------------------------------------------- Breaking Point #4 (4/4)*/
 @media screen and (max-width: 285px) {
+  header {
+    /*End Top Bar*/
+  }
   header .top-bar .menu {
     /*border: 1px solid red;*/
   }
@@ -742,16 +748,16 @@ footer .attribution a {
   header .top-bar .menu .bubble:after {
     border-width: 0 0 2.5rem 2.5rem;
   }
-
-  .hero h1 {
+  header .hero h1 {
     font-size: 1.1rem;
   }
 
-  .grid-features div.service1, .grid-features div.service2 {
+  /*End Header*/
+  .grid-features .service1, .grid-features .service2 {
     height: auto;
     padding-top: 15rem;
   }
 }
-/*-------------------------------------------End #4- Breaking Point (4/4)*/
+/*-------------------------------------------End Breaking Point #4 (4/4)*/
 
 /*# sourceMappingURL=style.css.map */
