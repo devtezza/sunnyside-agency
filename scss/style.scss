@@ -18,9 +18,9 @@
 
 /*PRIMARY COLORS*/
 $soft-red: hsl(7, 99%, 70%); /*Soft Red*/
-$soft-red-opacity: hsla(7, 99%, 70%, 0.3); /*Soft Red with opacity*/
+/*$soft-red-opacity: hsla(7, 99%, 70%, 0.3);/*      /*Soft Red with opacity*/
 $yellow: hsl(51, 100%, 49%); /*Yellow*/
-$yellow-opacity: hsla(51, 100%, 49%, 0.3); /*Yellow with opacity*/
+/*$yellow-opacity: hsla(51, 100%, 49%, 0.3);/*      /*Yellow with opacity*/
 $graph-cyan: hsl(167, 40%, 24%); /*Dark desaturated cyan (graphic design text)*/
 $photo-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
 $footer-text: hsl(168, 34%, 41%); /*Dark moderate cyan (footer text)*/
@@ -34,9 +34,6 @@ $vdg-blue: hsl(213, 9%, 39%); /*Very dark grayish blue*/
 $dg-blue: hsl(232, 10%, 55%); /*Dark grayish blue*/
 $g-blue: hsl(210, 4%, 67%); /*Grayish blue*/
 $white: hsl(0, 0%, 100%); /*White*/
-$white-opacity: hsla(0, 0%, 100%, 0.6);
-
-
 
 * {
     box-sizing: border-box;
@@ -105,7 +102,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    .top-bar {
+    .top-bar {        
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -115,22 +112,29 @@ header {
         font-size: 0.5rem;   
             .logo {    
                 width: 9rem;
-                padding-left: 1rem;
+                margin-left: 1rem;
                 img {
-                    width: 53%;                
+                    width: 53%;                              
                 }                
             }
             /*Mobile Menu Icon*/
-            .menu-hamburger {                  
+            .menu-hamburger {
+                text-align: center;
                 display: none;
-                cursor: pointer;
-                width: 3.5rem;
-                height: 2.5rem;
+                cursor: pointer;                
+                line-height: 1.5rem;                
+                margin-right: 1rem;                
+                padding: 0;
                 border: none;
                 outline: none;
                 opacity: 0;
                 visibility: visible;
-                background: none;                           
+                background: none;
+                img {
+                    width: 100%;
+                    height: 1.2rem;
+                    vertical-align: middle;
+                }                                  
             }
             /*Outside Mobile Menu Area (Open/Close menu when this area is clicked )*/
             .outside-menu {
@@ -151,7 +155,8 @@ header {
                         font-weight: 600;
                         color: $white;
                         &:hover {
-                            color: $white-opacity;
+                            /*color: green;*/
+                            opacity: 0.6;
                         }                                                  
                     }
                     
@@ -228,33 +233,26 @@ header {
         span {
             position: absolute;
             z-index: -1;
-            display: inline-block;
-            transition: background 500ms ease;   
+            display: inline-block;              
             width: 3.8rem;
             height: 0.3rem;
             margin-left: -3.55rem;        
             margin-top: 1rem;
             border-radius: 0.2rem;
-        }
+            opacity: 0.3;
+            transition: opacity 500ms ease;
+        }      
         .link-decoration-1 {
-            background: $yellow-opacity;        
+            background: $yellow;        
         }
         .link-decoration-2 {
-            background: $soft-red-opacity;
-            
-        }
-        a:hover span {
-            transition: background 500ms linear;
-        } 
-        
+            background: $soft-red;            
+        }              
         a:hover {
-            .link-decoration-1 {            
-                background: $yellow;           
+            span {            
+                opacity: 1;
+                transition: opacity 500ms ease;           
             }
-            .link-decoration-2 {
-                background: $soft-red;            
-            }
-            
         }
     } /*End classes .text1, .text2*/
 
@@ -497,7 +495,10 @@ footer {
                 display: block;
                 opacity: 1;
                 visibility: visible;
-                       
+                z-index: 999;
+                &:hover, &.active {
+                    opacity: 0.6;
+                }
             }
             .outside-menu {
              &.active {
@@ -517,7 +518,7 @@ footer {
                 visibility: hidden;
                 overflow-y: visible;            
                     .bubble {
-                        position: relative;                    
+                        position: relative;                  
                         padding: 0;                    
                         width: 100%;
                         height: 100%;                    
@@ -662,8 +663,7 @@ footer {
                 }
                 h3 {
                     font-size: 1.2rem;
-                    font-weight: 900;
-                    /*border: 1px solid black;*/
+                    font-weight: 900;                    
                     margin: 2rem auto 0.8rem auto;
                 }
                 & > div {  /*Client Job Title*/                  
@@ -696,17 +696,8 @@ footer {
                 padding-right: 0;                
                 display: flex;
                 justify-content: space-around;
-                li {
-                    /*border: 1px solid red;*/
-                    padding: 1rem 0;
-                    /*&:first-child{
-                        padding-left: 0;
-                        
-                    }
-                    &:last-child{
-                        padding-right: 0;
-                        
-                    }*/ 
+                li {                    
+                    padding: 1rem 0;                   
                     a {
                         color: $footer-text;      
                     }  
@@ -717,7 +708,7 @@ footer {
 } /*---------------------------------------------- End Breaking Point #1 (1/4)*/
 
 
-/*----------------------------------------- Breaking Point #2 (2/4) - Mobile */
+/*----------------------------------------- Breaking Point #2 (2/4) - Mobile Size */
 @media screen and (max-width: 375px) {    
     .grid-features { 
             .image1, .image2 {
@@ -732,7 +723,7 @@ footer {
                 height: 37.5rem;                  
             } 
     }    
-}/*-------------------------------------- End Breaking Point #2 (2/4) - Mobile */
+}/*-------------------------------------- End Breaking Point #2 (2/4) - Mobile Size*/
 
 
 /*---------------------------------------------- Breaking Point #3 (3/4)*/
@@ -764,12 +755,9 @@ footer {
 @media screen and (max-width: 285px) {
     header{    
         .top-bar { 
-            .menu {
-                /*border: 1px solid red;*/
+            .menu {                
                 ul {
-                    width: 95%;
-                    /*border: 1px dashed green;*/
-                    
+                    width: 95%; 
                 }
 
                 .bubble:after {

@@ -14,9 +14,9 @@
 }
 /*PRIMARY COLORS*/
 /*Soft Red*/
-/*Soft Red with opacity*/
+/*$soft-red-opacity: hsla(7, 99%, 70%, 0.3);/*      /*Soft Red with opacity*/
 /*Yellow*/
-/*Yellow with opacity*/
+/*$yellow-opacity: hsla(51, 100%, 49%, 0.3);/*      /*Yellow with opacity*/
 /*Dark desaturated cyan (graphic design text)*/
 /*Dark blue (photography text)*/
 /*Dark moderate cyan (footer text)*/
@@ -109,21 +109,28 @@ header .top-bar {
 }
 header .top-bar .logo {
   width: 9rem;
-  padding-left: 1rem;
+  margin-left: 1rem;
 }
 header .top-bar .logo img {
   width: 53%;
 }
 header .top-bar .menu-hamburger {
+  text-align: center;
   display: none;
   cursor: pointer;
-  width: 3.5rem;
-  height: 2.5rem;
+  line-height: 1.5rem;
+  margin-right: 1rem;
+  padding: 0;
   border: none;
   outline: none;
   opacity: 0;
   visibility: visible;
   background: none;
+}
+header .top-bar .menu-hamburger img {
+  width: 100%;
+  height: 1.2rem;
+  vertical-align: middle;
 }
 header .top-bar .outside-menu {
   position: fixed;
@@ -145,7 +152,8 @@ header .top-bar ul li:nth-child(-n+3) a {
   color: white;
 }
 header .top-bar ul li:nth-child(-n+3) a:hover {
-  color: rgba(255, 255, 255, 0.6);
+  /*color: green;*/
+  opacity: 0.6;
 }
 header .top-bar ul .cta {
   /*Top Bar Menu Button - Call To Action*/
@@ -217,27 +225,23 @@ header .hero h1 {
   position: absolute;
   z-index: -1;
   display: inline-block;
-  transition: background 500ms ease;
   width: 3.8rem;
   height: 0.3rem;
   margin-left: -3.55rem;
   margin-top: 1rem;
   border-radius: 0.2rem;
+  opacity: 0.3;
+  transition: opacity 500ms ease;
 }
 .grid-features .text1 .link-decoration-1, .grid-features .text2 .link-decoration-1 {
-  background: rgba(250, 212, 0, 0.3);
-}
-.grid-features .text1 .link-decoration-2, .grid-features .text2 .link-decoration-2 {
-  background: rgba(254, 120, 103, 0.3);
-}
-.grid-features .text1 a:hover span, .grid-features .text2 a:hover span {
-  transition: background 500ms linear;
-}
-.grid-features .text1 a:hover .link-decoration-1, .grid-features .text2 a:hover .link-decoration-1 {
   background: #fad400;
 }
-.grid-features .text1 a:hover .link-decoration-2, .grid-features .text2 a:hover .link-decoration-2 {
+.grid-features .text1 .link-decoration-2, .grid-features .text2 .link-decoration-2 {
   background: #fe7867;
+}
+.grid-features .text1 a:hover span, .grid-features .text2 a:hover span {
+  opacity: 1;
+  transition: opacity 500ms ease;
 }
 .grid-features .image1 {
   background-image: url("../images/desktop/image-transform.jpg");
@@ -483,6 +487,10 @@ footer .attribution a {
     display: block;
     opacity: 1;
     visibility: visible;
+    z-index: 999;
+  }
+  header .top-bar .menu-hamburger:hover, header .top-bar .menu-hamburger.active {
+    opacity: 0.6;
   }
   header .top-bar .outside-menu.active {
     display: block;
@@ -650,7 +658,6 @@ footer .attribution a {
   .testimonials .clients > div h3 {
     font-size: 1.2rem;
     font-weight: 900;
-    /*border: 1px solid black;*/
     margin: 2rem auto 0.8rem auto;
   }
   .testimonials .clients > div > div {
@@ -682,16 +689,7 @@ footer .attribution a {
     justify-content: space-around;
   }
   footer .menu ul li {
-    /*border: 1px solid red;*/
     padding: 1rem 0;
-    /*&:first-child{
-        padding-left: 0;
-
-    }
-    &:last-child{
-        padding-right: 0;
-
-    }*/
   }
   footer .menu ul li a {
     color: #458c7e;
@@ -700,7 +698,7 @@ footer .attribution a {
   /*End Footer*/
 }
 /*---------------------------------------------- End Breaking Point #1 (1/4)*/
-/*----------------------------------------- Breaking Point #2 (2/4) - Mobile */
+/*----------------------------------------- Breaking Point #2 (2/4) - Mobile Size */
 @media screen and (max-width: 375px) {
   .grid-features .image1, .grid-features .image2 {
     height: 20rem;
@@ -714,7 +712,7 @@ footer .attribution a {
     height: 37.5rem;
   }
 }
-/*-------------------------------------- End Breaking Point #2 (2/4) - Mobile */
+/*-------------------------------------- End Breaking Point #2 (2/4) - Mobile Size*/
 /*---------------------------------------------- Breaking Point #3 (3/4)*/
 @media screen and (max-width: 350px) {
   header .hero h1 {
@@ -738,12 +736,8 @@ footer .attribution a {
   header {
     /*End Top Bar*/
   }
-  header .top-bar .menu {
-    /*border: 1px solid red;*/
-  }
   header .top-bar .menu ul {
     width: 95%;
-    /*border: 1px dashed green;*/
   }
   header .top-bar .menu .bubble:after {
     border-width: 0 0 2.5rem 2.5rem;

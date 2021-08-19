@@ -4,14 +4,15 @@ const outsideMenu = document.querySelector('.outside-menu');
 
 
 // Open and Close navbarMenu by clik on menuHambuerger
-// Open and Close navbarMenu by Click Outside
 menuHamburger.addEventListener('click', toggleMenu);
+// Open and Close navbarMenu by Click Outside
 outsideMenu.addEventListener('click', toggleMenu);
 
 // Toggle Menu Function
 function toggleMenu() {
    
     navbarMenu.classList.toggle('active');
+    menuHamburger.classList.toggle('active');
     outsideMenu.classList.toggle('active');
     document.body.classList.toggle('scrolling');
     
