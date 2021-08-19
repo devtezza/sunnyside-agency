@@ -18,9 +18,7 @@
 
 /*PRIMARY COLORS*/
 $soft-red: hsl(7, 99%, 70%); /*Soft Red*/
-/*$soft-red-opacity: hsla(7, 99%, 70%, 0.3);/*      /*Soft Red with opacity*/
 $yellow: hsl(51, 100%, 49%); /*Yellow*/
-/*$yellow-opacity: hsla(51, 100%, 49%, 0.3);/*      /*Yellow with opacity*/
 $graph-cyan: hsl(167, 40%, 24%); /*Dark desaturated cyan (graphic design text)*/
 $photo-cyan: hsl(198, 62%, 26%); /*Dark blue (photography text)*/
 $footer-text: hsl(168, 34%, 41%); /*Dark moderate cyan (footer text)*/
@@ -36,7 +34,8 @@ $g-blue: hsl(210, 4%, 67%); /*Grayish blue*/
 $white: hsl(0, 0%, 100%); /*White*/
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 
@@ -103,9 +102,15 @@ header {
     background-position: center;
     background-size: cover;
     .top-bar {        
+        display: -webkit-box;        
+        display: -ms-flexbox;        
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         max-width: 100%;
         height: auto;
         padding: 0;
@@ -190,10 +195,13 @@ header {
 
 /*------------------------ MAIN ---------------------------------*/
 .grid-features {
+    display: -ms-grid;
     display: grid;   
+    -ms-grid-columns: 50% 50%;   
     grid-template-columns: 50% 50%;
+    -ms-grid-rows: (1fr)[3];
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
+        grid-template-areas: 
         "txt1 img1"
         "img2 txt2"
         "svc1 svc2 ";
@@ -204,9 +212,13 @@ header {
     }
     .text1, .text2 {
         .text1 {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
             grid-area: txt1;
         }
         .text2 {
+            -ms-grid-row: 2;
+            -ms-grid-column: 2;
             grid-area: txt2;
         }
         padding: 3rem 2.6rem 3rem 4rem;
@@ -240,6 +252,8 @@ header {
             margin-top: 1rem;
             border-radius: 0.2rem;
             opacity: 0.3;
+            -webkit-transition: opacity 500ms ease;
+            -o-transition: opacity 500ms ease;
             transition: opacity 500ms ease;
         }      
         .link-decoration-1 {
@@ -251,12 +265,16 @@ header {
         a:hover {
             span {            
                 opacity: 1;
+                -webkit-transition: opacity 500ms ease;
+                -o-transition: opacity 500ms ease;
                 transition: opacity 500ms ease;           
             }
         }
     } /*End classes .text1, .text2*/
 
     .image1 {        
+        -ms-grid-row: 1;        
+        -ms-grid-column: 2;        
         background-image: url('../images/desktop/image-transform.jpg');
         background-repeat: no-repeat; 
         background-position: center;
@@ -264,6 +282,8 @@ header {
         grid-area: img1;    
     }
     .image2 {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
         background-image: url('../images/desktop/image-stand-out.jpg');
         background-repeat: no-repeat; 
         background-position: center;
@@ -273,6 +293,8 @@ header {
 
     .service1, .service2 {
         &.service1 {        
+            -ms-grid-row: 3;        
+            -ms-grid-column: 1;        
             background-image: url('../images/desktop/image-graphic-design.jpg');
             background-repeat: no-repeat;
             background-position: center;
@@ -281,6 +303,8 @@ header {
             color: $graph-cyan;
         }
         &.service2 {    
+            -ms-grid-row: 3;    
+            -ms-grid-column: 2;    
             background-image: url('../images/desktop/image-photography.jpg');
             background-repeat: no-repeat;
             background-position: center;
@@ -316,8 +340,12 @@ header {
     .clients {
         margin-top: 2rem;
         max-width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;    
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;    
         > div {   /*individual client area*/     
             text-align: center;
             max-width: 28%;
@@ -352,11 +380,12 @@ header {
 } /*End Testimonials Section*/
 
 .gallery {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
     div {
-        height: 12rem;
-        /*border: 1px solid red;*/
+        height: 12rem;        
         &.img1 {    
             background-image: url('../images/desktop/image-gallery-milkbottles.jpg');
             background-repeat: no-repeat;
@@ -383,6 +412,7 @@ header {
         }
     }    
 } /*End Gallery Section*/
+/*------------------------  End Main Content ------------------------ */
 
 
 /*------------------------ FOOTER ---------------------------------*/
@@ -393,12 +423,10 @@ footer {
     .logo {
         width: 100%; 
         padding: 0;       
-        text-align: center;
-        /*border: 1px solid yellow;*/
+        text-align: center;        
         img {
             margin: 0 auto;
-            width: 9em;
-            /*border: 1px solid red;*/
+            width: 9em;            
         }
     }
     
@@ -411,12 +439,10 @@ footer {
             li {
                 padding: 1.2em 1.5em;
                 &:first-child {
-                    padding-left: 0;
-                    /*border: 1px solid yellow;*/
+                    padding-left: 0;                    
                 }
                 &:last-child {
-                    padding-right: 0;
-                    /*border: 1px solid yellow;*/
+                    padding-right: 0;                    
                 } 
                 a {
                     color: $footer-text;
@@ -428,10 +454,9 @@ footer {
         }        
     } /*End Footer Menu*/
 
-    .social-bar {
-    /*border: 1px solid red; */
-    margin: 3.5em auto;
-    text-align: center;        
+    .social-bar {    
+        margin: 3.5em auto;
+        text-align: center;        
         ul {
             padding-left: 0;
             padding-right: 0;            
@@ -439,19 +464,17 @@ footer {
             li {
                 padding: 0 0.75em;
                 &:first-child{
-                    padding-left: 0;
-                    /*border: 1px solid yellow;*/
+                    padding-left: 0;                   
                 }
                 &:last-child{
-                    padding-right: 0;
-                    /*border: 1px solid yellow;*/
+                    padding-right: 0;                   
                 }
                     a {
                         color: $footer-text;
-                        &:hover {
-                            /*color: $white;*/
+                        &:hover {                            
                             img {
-                                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(200%) contrast(101%);
+                                -webkit-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(200%) contrast(101%);
+                                        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(197deg) brightness(200%) contrast(101%);
                             }
                         } 
                     }
@@ -464,15 +487,14 @@ footer {
     
     } /*End Social Bar Icons */
 
-    .attribution {
-    /*border: 1px solid red; */
-    font-size: 0.5em;
-    text-align: center;
-    margin: 0 10em;
-    padding: 0;
-        a { 
-            color: $attr-color;
-        }
+    .attribution {    
+        font-size: 0.5em;
+        text-align: center;
+        margin: 0 10em;
+        padding: 0;
+            a { 
+                color: $attr-color;
+            }
     } /*End attribution*/
 
 } /*End Footer*/
@@ -541,6 +563,8 @@ footer {
                         right: 2rem;                    
                         opacity: 1;
                         visibility: visible;
+                        -webkit-transition: all 350ms ease-out;
+                        -o-transition: all 350ms ease-out;
                         transition: all 350ms ease-out;                        
                     }
                     ul {
@@ -677,8 +701,30 @@ footer {
 
     /*Gallery Section*/
     .gallery {
+        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+        -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);       
+
+    }
+    .gallery > *:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;       
+
+    }
+    .gallery > *:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;       
+
+    }
+    .gallery > *:nth-child(3) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;       
+
+    }
+    .gallery > *:nth-child(4) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;       
 
     } 
 
@@ -694,8 +740,11 @@ footer {
             ul {
                 padding-left: 0;
                 padding-right: 0;                
+                display: -webkit-box;                
+                display: -ms-flexbox;                
                 display: flex;
-                justify-content: space-around;
+                -ms-flex-pack: distribute;
+                    justify-content: space-around;
                 li {                    
                     padding: 1rem 0;                   
                     a {
