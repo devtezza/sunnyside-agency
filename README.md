@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/sass-flexbox-css-grid-javascript-8iEyZTsTY)
+- Live Site URL: [Add live site URL here](https://nandotezza.github.io/sunnyside-agency/)
 
 ## My process
 
