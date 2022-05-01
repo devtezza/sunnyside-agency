@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/sass-flexbox-css-grid-javascript-8iEyZTsTY)
-- Live Site URL: [Add live site URL here](https://nandotezza.github.io/sunnyside-agency/)
+- [Solution URL](https://www.frontendmentor.io/solutions/sass-flexbox-css-grid-javascript-8iEyZTsTY)
+- [Live Site URL](https://devtezza.github.io/sunnyside-agency/)
 
 ## My process
 
@@ -61,7 +61,7 @@ CSS Grid and Flexbox training, instead of Bootstrap (or other CSS framework) has
 
 ## Author
 - Author name - Fernando Tezza
-- Frontend Mentor - [@nandotezza](https://www.frontendmentor.io/profile/nandotezza)
+- Frontend Mentor - [@devtezza](https://www.frontendmentor.io/profile/devtezza)
 
 ## Acknowledgments
 
