@@ -60,7 +60,7 @@ CSS Grid and Flexbox training, instead of Bootstrap (or other CSS framework) has
 - [vanilla-navbar-menu](https://github.com/heyrizaldev/vanilla-navbar-menu) - It helped me to get a hint on how to build a responsive menu with no framework (only pure CSS/SASS and Javascript). I just adapted the code to fit my needs on this challenge.
 
 ## Author
-- Author name - Fernando Tezza
+- Website - [Fernando Tezza](https://www.devtezza.com/)
 - Frontend Mentor - [@devtezza](https://www.frontendmentor.io/profile/devtezza)
 
 ## Acknowledgments
